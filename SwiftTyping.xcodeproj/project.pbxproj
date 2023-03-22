@@ -113,15 +113,9 @@
 		9C9F931C29C9E42A0029CA22 /* SwiftTyping */ = {
 			isa = PBXGroup;
 			children = (
-				9C9F935F29CA23600029CA22 /* Game.swift */,
-				9C9F935D29CA193C0029CA22 /* Clock.swift */,
-				9C9F935B29CA09690029CA22 /* GameWords.swift */,
-				9C9F934D29C9FBD10029CA22 /* GameViewController.swift */,
-				9C9F934F29C9FBE60029CA22 /* SettingsViewController.swift */,
-				9C9F935129C9FBFE0029CA22 /* HiScoresViewController.swift */,
+				9C9F936129CB934A0029CA22 /* ViewControllers */,
 				9C9F931D29C9E42A0029CA22 /* AppDelegate.swift */,
 				9C9F931F29C9E42A0029CA22 /* SceneDelegate.swift */,
-				9C9F932129C9E42A0029CA22 /* ViewController.swift */,
 				9C9F935929CA03640029CA22 /* svenska-ord.txt */,
 				9C9F932329C9E42A0029CA22 /* Main.storyboard */,
 				9C9F932629C9E42B0029CA22 /* Assets.xcassets */,
@@ -146,6 +140,28 @@
 				9C9F934029C9E42B0029CA22 /* SwiftTypingUITestsLaunchTests.swift */,
 			);
 			path = SwiftTypingUITests;
+			sourceTree = "<group>";
+		};
+		9C9F936129CB934A0029CA22 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9C9F932129C9E42A0029CA22 /* ViewController.swift */,
+				9C9F935129C9FBFE0029CA22 /* HiScoresViewController.swift */,
+				9C9F934F29C9FBE60029CA22 /* SettingsViewController.swift */,
+				9C9F934D29C9FBD10029CA22 /* GameViewController.swift */,
+				9C9F936229CB93800029CA22 /* Model */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9C9F936229CB93800029CA22 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9C9F935D29CA193C0029CA22 /* Clock.swift */,
+				9C9F935B29CA09690029CA22 /* GameWords.swift */,
+				9C9F935F29CA23600029CA22 /* Game.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

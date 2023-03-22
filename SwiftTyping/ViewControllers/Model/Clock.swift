@@ -16,8 +16,8 @@ class Clock {
     var isRunning : Bool
     var timerLabel : UILabel!
     
-    init(secondsLeft: Double, timerLabel: UILabel!) {
-        self.timeLeft = secondsLeft
+    init(timerLabel: UILabel!) {
+        
         self.timer = Timer()
         self.isRunning = false
         self.timeSpent = 0
@@ -25,7 +25,10 @@ class Clock {
     }
     
     
-    func startTimer() {
+    func startTimer(difficulty: Int, wordLength: Int) {
+        let secondsPerLetter = (1.0 - (Double(difficulty) / 100))  * 0.4
+        timeLeft = (Double(wordLength) *  secondsPerLetter) + 2
+        print(wordLength, difficulty, secondsPerLetter, timeLeft)
         setStartTime()
         timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true, block: runTimer(timer:))
         isRunning = true

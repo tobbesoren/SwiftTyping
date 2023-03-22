@@ -10,10 +10,11 @@ import Foundation
 class GameWords {
     
     private var wordDict: [Int: [String]] = [:]
-    private var difficulty = 3
+    private var difficulty : Int
     private var currentWordList = [String]()
     
-    init() {
+    init(difficulty: Int) {
+        self.difficulty = difficulty
         let filePath = Bundle.main.path(forResource: "svenska-ord", ofType: "txt");
             let URL = NSURL.fileURL(withPath: filePath!)
 

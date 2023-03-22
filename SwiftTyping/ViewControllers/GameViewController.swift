@@ -8,37 +8,64 @@
 import UIKit
 
 class GameViewController: UIViewController {
-    let gameWords = GameWords()
+    
     var currentWord: String?
     var clock: Clock?
+    var difficulty: Int = 3
+    let gameWords = GameWords(difficulty: 3)
+    var score = 0
    
 
+    @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var randomWordLabel: UILabel!
-    
     @IBOutlet weak var difficultyLabel: UILabel!
-    
     @IBOutlet weak var timerLabel: UILabel!
-    
-    
-    
+    @IBOutlet weak var editTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        clock = Clock(secondsLeft: 10.0, timerLabel: timerLabel)
+        scoreLabel.text = String(score)
+        clock = Clock(timerLabel: timerLabel)
         setNewRandomWord()
         difficultyLabel.text = String(gameWords.getDifficulty())
-        clock?.startTimer()
+        clock?.startTimer(difficulty: gameWords.getDifficulty(), wordLength: randomWordLabel.text?.count ?? difficulty, timesUp: )
         // Do any additional setup after loading the view.
     }
     
     @IBAction func randomButtonPressed(_ sender: Any) {
         setNewRandomWord()
+        clock?.startTimer(difficulty: gameWords.getDifficulty(), wordLength: randomWordLabel.text?.count ?? difficulty)
     }
     
     func setNewRandomWord() {
         currentWord = gameWords.getRandomWord()
         randomWordLabel.text = currentWord
     }
+    
+    func timesUp() {
+        
+    }
+    
+    func updateTimerLabel() {
+        
+    }
+    
+    func updateScoreLabel() {
+        
+    }
+    
+    @IBAction func textEdited(_ sender: Any) {
+        if editTextField.text == currentWord {
+            print("Correct!")
+            setNewRandomWord()
+            clock?.startTimer(difficulty: gameWords.getDifficulty(), wordLength: randomWordLabel.text?.count ?? difficulty)
+            editTextField.text = ""
+            score += 1
+            scoreLabel.text = String(score)
+            
+        }
+    }
+    
     
     @IBAction func diffDownPressed(_ sender: Any) {
         let difficulty = gameWords.getDifficulty()
@@ -56,6 +83,7 @@ class GameViewController: UIViewController {
             difficultyLabel.text = String(gameWords.getDifficulty())
         }
     }
+    
     /*
     // MARK: - Navigation
 
