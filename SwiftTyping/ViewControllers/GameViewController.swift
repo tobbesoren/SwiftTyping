@@ -25,10 +25,10 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         scoreLabel.text = String(score)
-        clock = Clock(timerLabel: timerLabel)
+        clock = Clock(clockTickFunction: updateTimerLabel, timesUp: timesUp)
         setNewRandomWord()
         difficultyLabel.text = String(gameWords.getDifficulty())
-        clock?.startTimer(difficulty: gameWords.getDifficulty(), wordLength: randomWordLabel.text?.count ?? difficulty, timesUp: )
+        clock?.startTimer(difficulty: gameWords.getDifficulty(), wordLength: randomWordLabel.text?.count ?? difficulty)
         // Do any additional setup after loading the view.
     }
     
@@ -43,11 +43,12 @@ class GameViewController: UIViewController {
     }
     
     func timesUp() {
-        
+        timerLabel.text = "Time's up!"
     }
     
     func updateTimerLabel() {
-        
+        let currentTime = String(Int(Double(clock!.timeLeft) - Double(clock!.timeSpent)))
+        timerLabel.text = currentTime
     }
     
     func updateScoreLabel() {
@@ -62,7 +63,6 @@ class GameViewController: UIViewController {
             editTextField.text = ""
             score += 1
             scoreLabel.text = String(score)
-            
         }
     }
     
