@@ -244,8 +244,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="d8z-21-XO3"/>
                     <connections>
-                        <outlet property="difficultyLabel" destination="QaW-ZD-2SB" id="Ven-7t-VHS"/>
                         <outlet property="editTextField" destination="95c-n6-rgm" id="QEc-QT-lC3"/>
+                        <outlet property="levelLabel" destination="QaW-ZD-2SB" id="Ven-7t-VHS"/>
                         <outlet property="randomWordLabel" destination="oaJ-XK-vbd" id="cp5-dt-ubJ"/>
                         <outlet property="scoreLabel" destination="MLc-ei-TK5" id="sxz-tE-wiE"/>
                         <outlet property="timerLabel" destination="1nS-9n-h6N" id="iIA-0j-hkF"/>

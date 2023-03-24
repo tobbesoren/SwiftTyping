@@ -8,28 +8,26 @@
 import Foundation
 
 class Clock {
-    var timeLeft : Double = 0
+    var timeLeft : Double = 0.0
     var startTime : Date?
     var timer : Timer?
     var timeSpent : Double
     var isRunning : Bool
     var clockTickFunction : () -> Void
-    var timesUp : () -> Void
+    var timesUpFunction : () -> Void
     
-    init(clockTickFunction: @escaping () -> Void, timesUp: @escaping () -> Void) {
+    init(clockTickFunction: @escaping () -> Void, timesUpFunction: @escaping () -> Void) {
         
         self.timer = Timer()
         self.isRunning = false
-        self.timeSpent = 0
+        self.timeSpent = 0.0
         self.clockTickFunction = clockTickFunction
-        self.timesUp = timesUp
+        self.timesUpFunction = timesUpFunction
     }
     
     
-    func startTimer(difficulty: Int, wordLength: Int) {
-        let secondsPerLetter = (1.0 - (Double(difficulty) / 100))  * 0.6
-        timeLeft = (Double(wordLength) *  secondsPerLetter) + 2
-        print(wordLength, difficulty, secondsPerLetter, timeLeft)
+    func startTimer(timeSet: Double) {
+        timeLeft = timeSet
         setStartTime()
         timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true, block: runTimer(timer:))
         isRunning = true
@@ -42,6 +40,7 @@ class Clock {
     
     
     func runTimer(timer : Timer) {
+        if !isRunning {return}
         if let startTime {
             timeSpent = Date().timeIntervalSince1970 - startTime.timeIntervalSince1970
         } else {return}
@@ -49,7 +48,11 @@ class Clock {
         if timeLeft - timeSpent  > 1 {
             clockTickFunction()
         } else {
-            timesUp()
+            self.timeLeft = 0.0
+            self.timeSpent = 0.0
+            timer.invalidate()
+            isRunning = false
+            timesUpFunction()
         }
     }
     
