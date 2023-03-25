@@ -18,25 +18,93 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5FP-jL-udJ">
-                                <rect key="frame" x="100" y="139" width="193" height="20.333333333333343"/>
+                                <rect key="frame" x="0.0" y="139" width="393" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6wN-SY-MmI">
+                                <rect key="frame" x="30" y="230.33333333333337" width="150" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="9Ol-2O-hdJ"/>
+                                    <constraint firstAttribute="width" secondItem="6wN-SY-MmI" secondAttribute="height" multiplier="15:8" id="MFh-w5-bLa"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="UFs-hv-v2F" id="cpz-kG-mTd"/>
+                                    <outlet property="delegate" destination="UFs-hv-v2F" id="fJW-JJ-OBX"/>
+                                </connections>
+                            </pickerView>
+                            <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nWV-HU-4BL">
+                                <rect key="frame" x="210" y="230.33333333333337" width="153" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nWV-HU-4BL" secondAttribute="height" multiplier="153:80" id="hGh-SS-4yb"/>
+                                    <constraint firstAttribute="height" constant="80" id="lOj-eU-Nis"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="UFs-hv-v2F" id="Qi5-Zm-bWh"/>
+                                    <outlet property="delegate" destination="UFs-hv-v2F" id="ULu-gD-gYb"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Difficulty:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RCs-wv-0bX">
+                                <rect key="frame" x="30" y="209.33333333333334" width="150" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="RCs-wv-0bX" secondAttribute="height" multiplier="50:7" id="hQm-QG-JR6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Level:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7a-ko-FPs">
+                                <rect key="frame" x="210" y="209.33333333333334" width="153" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="b7a-ko-FPs" secondAttribute="height" multiplier="51:7" id="P9O-ah-hdo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDJ-dD-dKC">
+                                <rect key="frame" x="152" y="648" width="89" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Return"/>
+                                <connections>
+                                    <action selector="saveAndReturnButtonPressed:" destination="UFs-hv-v2F" eventType="touchUpInside" id="zK3-Vb-53c"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Qwc-F8-nDZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="5FP-jL-udJ" firstAttribute="leading" secondItem="Qwc-F8-nDZ" secondAttribute="leading" constant="100" id="DIK-fZ-OtK"/>
-                            <constraint firstItem="Qwc-F8-nDZ" firstAttribute="trailing" secondItem="5FP-jL-udJ" secondAttribute="trailing" constant="100" id="VfV-uz-Kym"/>
+                            <constraint firstItem="6wN-SY-MmI" firstAttribute="top" secondItem="RCs-wv-0bX" secondAttribute="bottom" id="5gE-qn-1pA"/>
+                            <constraint firstItem="6wN-SY-MmI" firstAttribute="leading" secondItem="Qwc-F8-nDZ" secondAttribute="leading" constant="30" id="899-d4-7Q2"/>
+                            <constraint firstItem="UDJ-dD-dKC" firstAttribute="leading" secondItem="Qwc-F8-nDZ" secondAttribute="leading" constant="152" id="DTe-5z-8UT"/>
+                            <constraint firstItem="RCs-wv-0bX" firstAttribute="leading" secondItem="6wN-SY-MmI" secondAttribute="leading" id="GLm-n1-hZh"/>
+                            <constraint firstItem="nWV-HU-4BL" firstAttribute="trailing" secondItem="b7a-ko-FPs" secondAttribute="trailing" id="IxV-12-yc0"/>
+                            <constraint firstItem="b7a-ko-FPs" firstAttribute="top" secondItem="5FP-jL-udJ" secondAttribute="bottom" constant="50" id="T4D-KM-Oct"/>
+                            <constraint firstItem="Qwc-F8-nDZ" firstAttribute="trailing" secondItem="5FP-jL-udJ" secondAttribute="trailing" id="V3D-q6-65G"/>
+                            <constraint firstItem="Qwc-F8-nDZ" firstAttribute="bottom" secondItem="UDJ-dD-dKC" secondAttribute="bottom" constant="100" id="ZaJ-PT-nLg"/>
+                            <constraint firstItem="Qwc-F8-nDZ" firstAttribute="trailing" secondItem="nWV-HU-4BL" secondAttribute="trailing" constant="30" id="bKB-b9-81b"/>
                             <constraint firstItem="5FP-jL-udJ" firstAttribute="top" secondItem="Qwc-F8-nDZ" secondAttribute="top" constant="80" id="fL6-nL-woE"/>
+                            <constraint firstItem="Qwc-F8-nDZ" firstAttribute="trailing" secondItem="UDJ-dD-dKC" secondAttribute="trailing" constant="152" id="j2n-3c-BoG"/>
+                            <constraint firstItem="nWV-HU-4BL" firstAttribute="top" secondItem="b7a-ko-FPs" secondAttribute="bottom" id="qix-Ax-qEY"/>
+                            <constraint firstItem="5FP-jL-udJ" firstAttribute="leading" secondItem="Qwc-F8-nDZ" secondAttribute="leading" id="qnO-gd-UXo"/>
+                            <constraint firstItem="RCs-wv-0bX" firstAttribute="top" secondItem="5FP-jL-udJ" secondAttribute="bottom" constant="50" id="sVQ-pb-06R"/>
+                            <constraint firstItem="b7a-ko-FPs" firstAttribute="leading" secondItem="nWV-HU-4BL" secondAttribute="leading" id="tqu-eg-gGp"/>
+                            <constraint firstItem="nWV-HU-4BL" firstAttribute="leading" secondItem="6wN-SY-MmI" secondAttribute="trailing" constant="30" id="v8f-mb-PZh"/>
+                            <constraint firstItem="RCs-wv-0bX" firstAttribute="trailing" secondItem="6wN-SY-MmI" secondAttribute="trailing" id="zPw-Dv-vA1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="QZ1-Xa-9Ma"/>
+                    <connections>
+                        <outlet property="difficultyPickerView" destination="6wN-SY-MmI" id="JxC-qR-GR8"/>
+                        <outlet property="startLevelPickerView" destination="nWV-HU-4BL" id="3iI-Qr-rYC"/>
+                        <segue destination="0Ua-A6-0d5" kind="unwind" identifier="returnToStartSegue" unwindAction="unwindToStartWithSegue:" id="lP3-vU-G7V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ibq-1G-oVd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="0Ua-A6-0d5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-750" y="-313"/>
+            <point key="canvasLocation" x="-750.38167938931292" y="-313.38028169014086"/>
         </scene>
         <!--Hi-scores-->
         <scene sceneID="L1U-ak-R3E">
