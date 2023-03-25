@@ -41,7 +41,7 @@ class Game {
         self.levelFunction = levelFunction
         self.clockTickFunction = clockTickFunction
         self.timesUpFunction = timesUpFunction
-        self.difficulty = defaults.integer(forKey: "Difficulty")
+        self.difficulty = defaults.integer(forKey: "Difficulty") + 1
         self.level = defaults.integer(forKey: "StartLevel") + 3
         gameWords = GameWords(level: level)
     }

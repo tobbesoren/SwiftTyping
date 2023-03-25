@@ -29,12 +29,12 @@ class GameOverViewController: UIViewController {
     @IBAction func saveAndExit(_ sender: Any) {
         
         
-        var hiScores: [[String?]] = defaults.object(forKey:"Hi-scores") as? [[String?]] ?? [[String?]]()
+        var hiScores: [[String?]] = defaults.object(forKey:"HiScores") as? [[String?]] ?? [[String?]]()
         if score ?? 0 > 0 {
             let newEntry = [String(score ?? 0), name]
             hiScores.append(newEntry)
             hiScores.sort(by: {Int($0[0] ?? "") ?? 0 > Int($1[0] ?? "") ?? 0})
-            defaults.set(hiScores, forKey: "Hi-scores")
+            defaults.set(hiScores, forKey: "HiScores")
         }
         performSegue(withIdentifier: "unWindSegue", sender: nil)
         

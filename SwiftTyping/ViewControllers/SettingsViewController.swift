@@ -32,7 +32,7 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         startLevel = defaults.integer(forKey: "StartLevel")
         print(String(difficulty ?? 0), String(startLevel ?? 0))
         picker1Options = ["Easy", "Normal", "Hard"]
-        for level in 3...27 {
+        for level in 1...25 {
             picker2Options.append(String(level))
         }
         
@@ -44,10 +44,6 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         
         startLevelPickerView.selectRow(defaultPicker2Row ?? 0, inComponent: 0, animated: false)
         pickerView(startLevelPickerView, didSelectRow: defaultPicker2Row ?? 0, inComponent: 0)
-        
-        
-
-        // Do any additional setup after loading the view.
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -78,29 +74,15 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             key = "StartLevel"
         }
         saveSelected(row: row, key: key)
-//        selectedCategory = categoryPickerList[row]
     }
     
     func saveSelected(row : Int, key: String) {
-        
-        
         defaults.set(row, forKey: key )
         defaults.synchronize()
-        
-        
     }
-
-    @IBAction func saveAndReturnButtonPressed(_ sender: Any) {
-        performSegue(withIdentifier: "returnToStartSegue", sender: nil)
+    
+    
+    @IBAction func returnPressed(_ sender: Any) {
+        performSegue(withIdentifier: "unwindToStart", sender: nil)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

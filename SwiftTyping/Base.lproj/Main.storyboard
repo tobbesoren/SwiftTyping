@@ -24,7 +24,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6wN-SY-MmI">
-                                <rect key="frame" x="30" y="230.33333333333337" width="150" height="80"/>
+                                <rect key="frame" x="30" y="230" width="150" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="9Ol-2O-hdJ"/>
                                     <constraint firstAttribute="width" secondItem="6wN-SY-MmI" secondAttribute="height" multiplier="15:8" id="MFh-w5-bLa"/>
@@ -35,7 +35,7 @@
                                 </connections>
                             </pickerView>
                             <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nWV-HU-4BL">
-                                <rect key="frame" x="210" y="230.33333333333337" width="153" height="80"/>
+                                <rect key="frame" x="210" y="230" width="153" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="nWV-HU-4BL" secondAttribute="height" multiplier="153:80" id="hGh-SS-4yb"/>
                                     <constraint firstAttribute="height" constant="80" id="lOj-eU-Nis"/>
@@ -68,7 +68,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Return"/>
                                 <connections>
-                                    <action selector="saveAndReturnButtonPressed:" destination="UFs-hv-v2F" eventType="touchUpInside" id="zK3-Vb-53c"/>
+                                    <action selector="returnPressed:" destination="UFs-hv-v2F" eventType="touchUpInside" id="BHk-dR-BsM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -98,7 +98,7 @@
                     <connections>
                         <outlet property="difficultyPickerView" destination="6wN-SY-MmI" id="JxC-qR-GR8"/>
                         <outlet property="startLevelPickerView" destination="nWV-HU-4BL" id="3iI-Qr-rYC"/>
-                        <segue destination="0Ua-A6-0d5" kind="unwind" identifier="returnToStartSegue" unwindAction="unwindToStartWithSegue:" id="lP3-vU-G7V"/>
+                        <segue destination="0Ua-A6-0d5" kind="unwind" identifier="unwindToStart" unwindAction="unwindToStartWithSegue:" id="uZh-eJ-Gi7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ibq-1G-oVd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -106,49 +106,70 @@
             </objects>
             <point key="canvasLocation" x="-750.38167938931292" y="-313.38028169014086"/>
         </scene>
-        <!--Hi-scores-->
-        <scene sceneID="L1U-ak-R3E">
+        <!--Hi Score Table View Controller-->
+        <scene sceneID="LHO-i7-HDu">
             <objects>
-                <viewController title="Hi-scores" id="eFJ-jg-j0r" customClass="HiScoresViewController" customModule="SwiftTyping" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="sYn-8z-khg">
+                <tableViewController id="raC-0Z-umb" customClass="HiScoreTableViewController" customModule="SwiftTyping" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="MZz-ge-jGf">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi-scores" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvR-E8-wbZ">
-                                <rect key="frame" x="100" y="139" width="193" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbM-kd-bFN">
-                                <rect key="frame" x="152" y="648" width="89" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="To meny"/>
-                                <connections>
-                                    <segue destination="q1M-ey-1XX" kind="unwind" unwindAction="unwindToStartWithSegue:" id="RRQ-xs-e4n"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="OJM-J4-3nm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="OJM-J4-3nm" firstAttribute="trailing" secondItem="dvR-E8-wbZ" secondAttribute="trailing" constant="100" id="Kk8-eV-TUN"/>
-                            <constraint firstItem="mbM-kd-bFN" firstAttribute="leading" secondItem="OJM-J4-3nm" secondAttribute="leading" constant="152" id="h0Y-nD-hB3"/>
-                            <constraint firstItem="OJM-J4-3nm" firstAttribute="trailing" secondItem="mbM-kd-bFN" secondAttribute="trailing" constant="152" id="iR2-eC-Kz7"/>
-                            <constraint firstItem="OJM-J4-3nm" firstAttribute="bottom" secondItem="mbM-kd-bFN" secondAttribute="bottom" constant="100" id="iqa-FI-zof"/>
-                            <constraint firstItem="dvR-E8-wbZ" firstAttribute="top" secondItem="OJM-J4-3nm" secondAttribute="top" constant="80" id="mao-EI-kCl"/>
-                            <constraint firstItem="dvR-E8-wbZ" firstAttribute="leading" secondItem="OJM-J4-3nm" secondAttribute="leading" constant="100" id="rQo-Lw-zJ5"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="Cni-1l-3LF"/>
-                    <connections>
-                        <outlet property="hiScoresLabel" destination="dvR-E8-wbZ" id="Iid-N6-KgL"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dAl-8D-oBg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="q1M-ey-1XX" userLabel="Exit" sceneMemberID="exit"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="scoreCell" id="cvi-N0-EeN" customClass="HiScoreTableViewCell" customModule="SwiftTyping" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="393" height="41.333332061767578"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cvi-N0-EeN" id="4OM-Do-5vo">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="41.333332061767578"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rank" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AcT-WX-Lv9">
+                                            <rect key="frame" x="30" y="9.9999999999999982" width="38" height="21.333333333333329"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDp-TP-hPQ">
+                                            <rect key="frame" x="117.99999999999999" y="9.9999999999999982" width="44.333333333333329" height="21.333333333333329"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jID-24-Rqj">
+                                            <rect key="frame" x="248" y="9.9999999999999982" width="45" height="21.333333333333329"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="jID-24-Rqj" secondAttribute="bottom" constant="10" id="3Nj-rw-fxZ"/>
+                                        <constraint firstAttribute="bottom" secondItem="AcT-WX-Lv9" secondAttribute="bottom" constant="10" id="6vj-bO-TRp"/>
+                                        <constraint firstAttribute="trailing" secondItem="jID-24-Rqj" secondAttribute="trailing" constant="100" id="8q0-cT-TWI"/>
+                                        <constraint firstItem="rDp-TP-hPQ" firstAttribute="top" secondItem="4OM-Do-5vo" secondAttribute="top" constant="10" id="BA8-PW-A9b"/>
+                                        <constraint firstItem="jID-24-Rqj" firstAttribute="top" secondItem="4OM-Do-5vo" secondAttribute="top" constant="10" id="Ncp-hW-Wtf"/>
+                                        <constraint firstAttribute="bottom" secondItem="rDp-TP-hPQ" secondAttribute="bottom" constant="10" id="bvs-ek-Fdp"/>
+                                        <constraint firstItem="AcT-WX-Lv9" firstAttribute="leading" secondItem="4OM-Do-5vo" secondAttribute="leading" constant="30" id="dpv-R2-a0i"/>
+                                        <constraint firstItem="AcT-WX-Lv9" firstAttribute="top" secondItem="4OM-Do-5vo" secondAttribute="top" constant="10" id="gq2-GN-Xj5"/>
+                                        <constraint firstItem="rDp-TP-hPQ" firstAttribute="leading" secondItem="AcT-WX-Lv9" secondAttribute="trailing" constant="50" id="l5v-vc-cKM"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="jID-24-Rqj" id="oct-gs-hik"/>
+                                    <outlet property="rankLabel" destination="AcT-WX-Lv9" id="DoY-9y-BVN"/>
+                                    <outlet property="scoreLabel" destination="rDp-TP-hPQ" id="V6t-4G-UtL"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="raC-0Z-umb" id="CK0-bx-Ei7"/>
+                            <outlet property="delegate" destination="raC-0Z-umb" id="19U-hJ-YM2"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="yjK-d6-9Gt"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qLa-Rz-S30" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-750" y="396"/>
+            <point key="canvasLocation" x="-790.07633587786256" y="497.88732394366201"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -177,7 +198,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="See hi-scores"/>
                                 <connections>
-                                    <segue destination="eFJ-jg-j0r" kind="show" id="HNk-3O-AcU"/>
+                                    <segue destination="raC-0Z-umb" kind="show" id="PCf-1g-jW4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="74f-yN-4Lq">
