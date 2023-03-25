@@ -9,9 +9,14 @@ import UIKit
 
 class HiScoresViewController: UIViewController {
 
+    @IBOutlet weak var hiScoresLabel: UILabel!
+    let defaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if let hiScores: [Int] = defaults.object(forKey: "Hi-scores") as? [Int] {
+            hiScoresLabel.text = String(hiScores.last ?? 0)
+        }
         // Do any additional setup after loading the view.
     }
     
