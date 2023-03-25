@@ -9,15 +9,15 @@ import UIKit
 
 class GameViewController: UIViewController {
     
-    var currentWord: String = ""
-    var clock: Clock?
-    var level: Int = 3
-    var difficulty = 1
-    let gameWords = GameWords(level: 3)
-    var score = 0
+    //    var currentWord: String = ""
+    //    //var clock: Clock?
+    //    var level: Int = 3
+    //    var difficulty = 1
+    //    let gameWords = GameWords(level: 3)
+    //    var score = 0
     var game: Game?
-   
-
+    
+    
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var randomWordLabel: UILabel!
     @IBOutlet weak var levelLabel: UILabel!
@@ -26,72 +26,125 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        game = Game(clockTickFunction: updateTimerLabel, timesUpFunction: timesUp)
+        
+        game = Game(scoreFunction: updateScoreLabel, randomWordFunction: updateWordLabel, levelFunction: updateLevelLabel, clockTickFunction: updateTimerLabel, timesUpFunction: timesUp)
+        
+        levelLabel.text = String(game?.gameWords.getLevel() ?? 0)
+        scoreLabel.text = String(game?.score ?? 0)
+        
+        //        clock = Clock(clockTickFunction: updateTimerLabel, timesUpFunction: timesUp)
+        //        setNewRandomWord()
+        
+        //        clock?.startTimer(timeSet: calculateTime())
+        //        // Do any additional setup after loading the view.
+    }
+    
+    
+    
+    
+    //    func setNewRandomWord() {
+    //        currentWord = gameWords.getRandomWord()
+    //        randomWordLabel.text = currentWord
+    //    }
+    
+    
+    func updateScoreLabel(score: Int) {
         scoreLabel.text = String(score)
-        clock = Clock(clockTickFunction: updateTimerLabel, timesUpFunction: timesUp)
-        setNewRandomWord()
-        levelLabel.text = String(gameWords.getLevel())
-        clock?.startTimer(timeSet: calculateTime())
-        // Do any additional setup after loading the view.
+        //        let newScore = level * difficulty * currentWord.count * (Int(clock?.timeLeft ?? 0) - Int(clock?.timeSpent ?? 0))
+        //        score += newScore
+        //        scoreLabel.text = String(score)
     }
     
-    @IBAction func randomButtonPressed(_ sender: Any) {
-        setNewRandomWord()
-        clock?.startTimer(timeSet: calculateTime())
+    func updateWordLabel(word: String) {
+        randomWordLabel.text = word
     }
     
-    func setNewRandomWord() {
-        currentWord = gameWords.getRandomWord()
-        randomWordLabel.text = currentWord
-    }
-    
-    func timesUp() {
-        timerLabel.text = "Time's up!"
+    func updateLevelLabel(level: Int) {
+        levelLabel.text = String(level)
     }
     
     func updateTimerLabel() {
-        let currentTime = String(Int(Double(clock!.timeLeft) - Double(clock!.timeSpent)))
+        let currentTime = String(Int(Double(game?.clock!.timeLeft ?? 0) - Double(game?.clock!.timeSpent ?? 0)))
         timerLabel.text = currentTime
     }
     
-    func updateScoreLabel() {
-        print("level: \(level) * difficulty: \(difficulty) * wordLength: \(currentWord.count)  * timeLeft: \(Int(clock?.timeLeft ?? 0) - Int(clock?.timeSpent ?? 0)) Score: \(level * difficulty * currentWord.count * (Int(clock?.timeLeft ?? 0) - Int(clock?.timeSpent ?? 0)))" )
-        let newScore = level * difficulty * currentWord.count * (Int(clock?.timeLeft ?? 0) - Int(clock?.timeSpent ?? 0))
-        score += newScore
-        scoreLabel.text = String(score)
+    func timesUp() {
+        performSegue(withIdentifier: "GameOverSegue", sender: nil)
+        game?.resetValues()
+        randomWordLabel.text = "Ready?"
+        scoreLabel.text = "Score"
+        timerLabel.text = "0"
+        levelLabel.text = String(game?.gameWords.getLevel() ?? 0)
+        scoreLabel.text = String(game?.score ?? 0)
+        editTextField.text = ""
+        
+    }
+    
+    
+    @IBAction func randomButtonPressed(_ sender: Any) {
+        game?.newWord()
+    }
+    //        setNewRandomWord()
+    //        clock?.startTimer(timeSet: calculateTime())
+    
+    @IBAction func textFieldSelected(_ sender: Any) {
+        print("!!!")
+        if let gameRunning = game?.gameRunning {
+            if !gameRunning {
+                game?.startGame()
+            }
+        }
+        
     }
     
     @IBAction func textEdited(_ sender: Any) {
-        if editTextField.text == currentWord {
-            updateScoreLabel()
-            setNewRandomWord()
-            clock?.startTimer(timeSet: calculateTime())
-            editTextField.text = ""
+        game?.enteredWord = editTextField.text ?? ""
+        if let game {
+            if game.checkWord() {editTextField.text = ""}
         }
+        
+        //        if editTextField.text == currentWord {
+        //            updateScoreLabel()
+        //            setNewRandomWord()
+        //            clock?.startTimer(timeSet: calculateTime())
+        //            editTextField.text = ""
+        //        }
     }
     
-    func calculateTime() -> Double {
-        let secondsPerLetter = (1.0 - (Double(level) / 100))  * 0.6
-        let timeLeft = (Double(currentWord.count) * secondsPerLetter) + 2
-        return timeLeft
-    }
+    //    func calculateTime() -> Double {
+    //        let secondsPerLetter = (1.0 - (Double(level) / 100))  * 0.6
+    //        let timeLeft = (Double(currentWord.count) * secondsPerLetter) + 2
+    //        return timeLeft
+    //    }
     
     
     @IBAction func diffDownPressed(_ sender: Any) {
-        let level = gameWords.getLevel()
-        if level > 3 {
-            gameWords.setLevel(level: level - 1)
-            levelLabel.text = String(gameWords.getLevel())
-        }
+        game?.decreaseLevel()
+        //        let level = gameWords.getLevel()
+        //        if level > 3 {
+        //            gameWords.setLevel(level: level - 1)
+        //            levelLabel.text = String(gameWords.getLevel())
+        //        }
     }
     
     
     @IBAction func diffUpPressed(_ sender: Any) {
-        let level = gameWords.getLevel()
-        if level < 27  {
-            gameWords.setLevel(level: level + 1)
-            levelLabel.text = String(gameWords.getLevel())
+        game?.raiseLevel()
+        //        let level = gameWords.getLevel()
+        //        if level < 27  {
+        //            gameWords.setLevel(level: level + 1)
+        //            levelLabel.text = String(gameWords.getLevel())
+        //        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "GameOverSegue" {
+            if let destinationVC = segue.destination as? GameOverViewController {
+               destinationVC.score = game?.score
+            }
+            
         }
+        
     }
     
     /*
