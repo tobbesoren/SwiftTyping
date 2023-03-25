@@ -98,7 +98,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Start game"/>
                                 <connections>
-                                    <segue destination="Vdr-rR-YdC" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="fQZ-sB-kwG"/>
+                                    <action selector="startButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qpz-SV-dUy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MXh-b5-uLa">
@@ -129,6 +129,11 @@
                                 <color key="textColor" name="AccentColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name:" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9bu-u2-rs8">
+                                <rect key="frame" x="0.0" y="447.33333333333331" width="393" height="45.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -137,12 +142,19 @@
                             <constraint firstItem="MXh-b5-uLa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E0R-ZJ-e2h"/>
                             <constraint firstItem="MtD-dn-L0R" firstAttribute="top" secondItem="74f-yN-4Lq" secondAttribute="bottom" constant="20" id="Ft6-ZF-3BB"/>
                             <constraint firstItem="MXh-b5-uLa" firstAttribute="top" secondItem="MtD-dn-L0R" secondAttribute="bottom" constant="20" id="HW2-Xy-thR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9bu-u2-rs8" secondAttribute="trailing" id="XXB-Tg-mbj"/>
+                            <constraint firstItem="74f-yN-4Lq" firstAttribute="top" secondItem="9bu-u2-rs8" secondAttribute="bottom" constant="130" id="bZF-g3-Y9W"/>
                             <constraint firstItem="74f-yN-4Lq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cMp-Ia-mU0"/>
+                            <constraint firstItem="9bu-u2-rs8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="czs-ZE-FuK"/>
                             <constraint firstItem="80I-yB-zzQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="220" id="eIk-PY-rxw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MXh-b5-uLa" secondAttribute="bottom" constant="50" id="qyJ-ry-9uG"/>
                             <constraint firstItem="MtD-dn-L0R" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uB7-hZ-plS"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nameEdit" destination="9bu-u2-rs8" id="a3s-rG-cVS"/>
+                        <segue destination="Vdr-rR-YdC" kind="presentation" identifier="startGameSegue" id="BIh-5R-fHV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -202,6 +214,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Z99-Pb-jkB"/>
                     <connections>
+                        <outlet property="nameLabel" destination="dmJ-Qb-MSn" id="Jli-E5-g17"/>
                         <outlet property="scoreLabel" destination="k8q-ZM-ElE" id="1UA-lC-BF5"/>
                         <segue destination="7UU-Zu-g4b" kind="unwind" identifier="unWindSegue" unwindAction="unwindToStartWithSegue:" id="mZP-0t-Pb2"/>
                     </connections>
@@ -216,7 +229,7 @@
             <objects>
                 <viewController title="Game" id="Vdr-rR-YdC" customClass="GameViewController" customModule="SwiftTyping" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fvL-so-Maq">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MLc-ei-TK5">
@@ -232,7 +245,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lOj-Fc-dSV">
-                                <rect key="frame" x="100" y="733" width="193" height="35"/>
+                                <rect key="frame" x="100" y="698" width="193" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="New random word"/>
                                 <connections>
@@ -240,7 +253,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8df-cx-rCM">
-                                <rect key="frame" x="238" y="598" width="75" height="35"/>
+                                <rect key="frame" x="238" y="563" width="75" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Diff up"/>
                                 <connections>
@@ -248,7 +261,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zrt-Ae-bTe">
-                                <rect key="frame" x="80" y="598" width="97" height="35"/>
+                                <rect key="frame" x="80" y="563" width="97" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Diff down"/>
                                 <connections>
@@ -288,12 +301,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MoT-TY-JVx">
+                                <rect key="frame" x="0.0" y="628" width="393" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DOq-Tg-HZb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="DOq-Tg-HZb" firstAttribute="trailing" secondItem="lOj-Fc-dSV" secondAttribute="trailing" constant="100" id="1gx-9p-8qU"/>
                             <constraint firstItem="MLc-ei-TK5" firstAttribute="leading" secondItem="DOq-Tg-HZb" secondAttribute="leading" constant="100" id="4b9-fu-d68"/>
+                            <constraint firstItem="lOj-Fc-dSV" firstAttribute="top" secondItem="MoT-TY-JVx" secondAttribute="bottom" constant="40" id="5t5-df-zCT"/>
                             <constraint firstItem="DOq-Tg-HZb" firstAttribute="trailing" secondItem="95c-n6-rgm" secondAttribute="trailing" id="8BS-fD-B7s"/>
                             <constraint firstItem="Zrt-Ae-bTe" firstAttribute="leading" secondItem="DOq-Tg-HZb" secondAttribute="leading" constant="80" id="8OW-p2-Fa2"/>
                             <constraint firstItem="DOq-Tg-HZb" firstAttribute="trailing" secondItem="OcL-P1-XZq" secondAttribute="trailing" constant="100" id="Alc-zY-qfe"/>
@@ -304,6 +324,7 @@
                             <constraint firstItem="lOj-Fc-dSV" firstAttribute="top" secondItem="Zrt-Ae-bTe" secondAttribute="bottom" constant="100" id="JU5-3t-Vdo"/>
                             <constraint firstItem="OcL-P1-XZq" firstAttribute="top" secondItem="QaW-ZD-2SB" secondAttribute="bottom" constant="30" id="MM3-GD-koV"/>
                             <constraint firstItem="QaW-ZD-2SB" firstAttribute="leading" secondItem="DOq-Tg-HZb" secondAttribute="leading" constant="100" id="NaZ-op-MNV"/>
+                            <constraint firstItem="MoT-TY-JVx" firstAttribute="leading" secondItem="DOq-Tg-HZb" secondAttribute="leading" id="NpK-NL-Pfv"/>
                             <constraint firstItem="DOq-Tg-HZb" firstAttribute="trailing" secondItem="QaW-ZD-2SB" secondAttribute="trailing" constant="100" id="TNJ-l9-dwC"/>
                             <constraint firstItem="oaJ-XK-vbd" firstAttribute="leading" secondItem="DOq-Tg-HZb" secondAttribute="leading" id="V2W-KM-mfc"/>
                             <constraint firstItem="DOq-Tg-HZb" firstAttribute="trailing" secondItem="8df-cx-rCM" secondAttribute="trailing" constant="80" id="aAQ-dH-BfB"/>
@@ -318,6 +339,7 @@
                             <constraint firstItem="DOq-Tg-HZb" firstAttribute="bottom" secondItem="lOj-Fc-dSV" secondAttribute="bottom" constant="50" id="slR-ib-sSG"/>
                             <constraint firstItem="oaJ-XK-vbd" firstAttribute="top" secondItem="MLc-ei-TK5" secondAttribute="bottom" constant="50" id="t8X-d9-POz"/>
                             <constraint firstItem="OcL-P1-XZq" firstAttribute="leading" secondItem="DOq-Tg-HZb" secondAttribute="leading" constant="100" id="tqf-EE-I4K"/>
+                            <constraint firstItem="DOq-Tg-HZb" firstAttribute="trailing" secondItem="MoT-TY-JVx" secondAttribute="trailing" id="vaB-Lg-xhf"/>
                             <constraint firstItem="DOq-Tg-HZb" firstAttribute="trailing" secondItem="MLc-ei-TK5" secondAttribute="trailing" constant="100" id="vgP-Sv-bqp"/>
                         </constraints>
                     </view>
@@ -325,6 +347,7 @@
                     <connections>
                         <outlet property="editTextField" destination="95c-n6-rgm" id="QEc-QT-lC3"/>
                         <outlet property="levelLabel" destination="QaW-ZD-2SB" id="Ven-7t-VHS"/>
+                        <outlet property="nameLabel" destination="MoT-TY-JVx" id="UcT-5Y-wcI"/>
                         <outlet property="randomWordLabel" destination="oaJ-XK-vbd" id="cp5-dt-ubJ"/>
                         <outlet property="scoreLabel" destination="MLc-ei-TK5" id="sxz-tE-wiE"/>
                         <outlet property="timerLabel" destination="1nS-9n-h6N" id="iIA-0j-hkF"/>
@@ -333,7 +356,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bKT-YG-KJh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1055.7251908396945" y="-278.16901408450707"/>
+            <point key="canvasLocation" x="1054.1984732824426" y="-278.16901408450707"/>
         </scene>
     </scenes>
     <resources>
