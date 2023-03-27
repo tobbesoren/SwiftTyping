@@ -25,6 +25,8 @@
 		9C9F936429CDEEE10029CA22 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F936329CDEEE10029CA22 /* GameOverViewController.swift */; };
 		9C9F93AE29CFA5AB0029CA22 /* HiScoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F93AD29CFA5AB0029CA22 /* HiScoreTableViewController.swift */; };
 		9C9F93B229CFAA690029CA22 /* HiScoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F93B129CFAA690029CA22 /* HiScoreTableViewCell.swift */; };
+		9C9F93B629D095270029CA22 /* dw21batch2-mynt-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C9F93B529D095270029CA22 /* dw21batch2-mynt-01.jpg */; };
+		9C9F93B929D0AC010029CA22 /* MomType.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C9F93B829D0AC010029CA22 /* MomType.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		9C9F936329CDEEE10029CA22 /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 		9C9F93AD29CFA5AB0029CA22 /* HiScoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiScoreTableViewController.swift; sourceTree = "<group>"; };
 		9C9F93B129CFAA690029CA22 /* HiScoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiScoreTableViewCell.swift; sourceTree = "<group>"; };
+		9C9F93B529D095270029CA22 /* dw21batch2-mynt-01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "dw21batch2-mynt-01.jpg"; path = "../../../../../../Downloads/hand-drawn-retro-typewriter/dw21batch2-mynt-01.jpg"; sourceTree = "<group>"; };
+		9C9F93B829D0AC010029CA22 /* MomType.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = MomType.ttf; path = ../../../../../Downloads/moms_typewriter/MomType.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,7 @@
 		9C9F931C29C9E42A0029CA22 /* SwiftTyping */ = {
 			isa = PBXGroup;
 			children = (
+				9C9F93B729D0ABE70029CA22 /* Fonts */,
 				9C9F936129CB934A0029CA22 /* ViewControllers */,
 				9C9F931D29C9E42A0029CA22 /* AppDelegate.swift */,
 				9C9F931F29C9E42A0029CA22 /* SceneDelegate.swift */,
@@ -165,9 +170,18 @@
 				9C9F935D29CA193C0029CA22 /* Clock.swift */,
 				9C9F935B29CA09690029CA22 /* GameWords.swift */,
 				9C9F935F29CA23600029CA22 /* Game.swift */,
+				9C9F93B529D095270029CA22 /* dw21batch2-mynt-01.jpg */,
 				9C9F93B129CFAA690029CA22 /* HiScoreTableViewCell.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		9C9F93B729D0ABE70029CA22 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9C9F93B829D0AC010029CA22 /* MomType.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +289,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C9F932A29C9E42B0029CA22 /* LaunchScreen.storyboard in Resources */,
+				9C9F93B629D095270029CA22 /* dw21batch2-mynt-01.jpg in Resources */,
+				9C9F93B929D0AC010029CA22 /* MomType.ttf in Resources */,
 				9C9F932729C9E42B0029CA22 /* Assets.xcassets in Resources */,
 				9C9F935A29CA03650029CA22 /* svenska-ord.txt in Resources */,
 				9C9F932529C9E42A0029CA22 /* Main.storyboard in Resources */,

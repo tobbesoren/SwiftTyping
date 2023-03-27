@@ -31,7 +31,7 @@ class GameViewController: UIViewController {
         
         game = Game(scoreFunction: updateScoreLabel, randomWordFunction: updateWordLabel, levelFunction: updateLevelLabel, clockTickFunction: updateTimerLabel, timesUpFunction: timesUp)
         
-        levelLabel.text = String(game?.gameWords.getLevel() ?? 0)
+        levelLabel.text = "Level: \(String(((game?.gameWords.getLevel() ?? 0) - 2) ))"
         scoreLabel.text = String(game?.score ?? 0)
     }
     
@@ -44,7 +44,7 @@ class GameViewController: UIViewController {
     }
     
     func updateLevelLabel(level: Int) {
-        levelLabel.text = String(level)
+        levelLabel.text = "Level: \(String(level - 2))"
     }
     
     func updateTimerLabel() {
