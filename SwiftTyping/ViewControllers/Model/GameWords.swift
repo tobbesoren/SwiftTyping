@@ -29,7 +29,7 @@ class GameWords {
                 print(error);
             }
         setCurrentWordList()
-        print(currentWordList)
+        //print(currentWordList)
     }
     
     private func addWordToDict(word: String) {

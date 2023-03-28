@@ -9,6 +9,8 @@ import Foundation
 
 
 class Game {
+    let defaults = UserDefaults.standard
+    
     let gameWords: GameWords
     var clock: Clock?
     
@@ -22,6 +24,7 @@ class Game {
     var level: Int = 3
     var currentWord: String = ""
     var difficulty: Int = 1
+    var startLevel = 3
     var clearedWords = 0
     var gameRunning = false
     
@@ -38,6 +41,8 @@ class Game {
         self.levelFunction = levelFunction
         self.clockTickFunction = clockTickFunction
         self.timesUpFunction = timesUpFunction
+        self.difficulty = defaults.integer(forKey: "Difficulty") + 1
+        self.level = defaults.integer(forKey: "StartLevel") + 3
         gameWords = GameWords(level: level)
     }
     
@@ -138,8 +143,9 @@ class Game {
     }
     
     func calculateTime() -> Double {
-        let secondsPerLetter = (1.0 - (Double(level) / 100))  * 0.6
+        let secondsPerLetter = (1.0 - (Double(level) / 100))  * (0.7 - Double(difficulty) / 10)
         let timeLeft = (Double(currentWord.count) * secondsPerLetter) + 2
+        print(String(secondsPerLetter))
         return timeLeft
     }
     

@@ -3,11 +3,15 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="MomType.ttf">
+            <string>MomsTypewriter</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Settings View Controller-->
         <scene sceneID="gWT-Nw-djc">
@@ -18,69 +22,161 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5FP-jL-udJ">
-                                <rect key="frame" x="100" y="139" width="193" height="20.333333333333343"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="0.0" y="139" width="393" height="20"/>
+                                <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="17"/>
+                                <color key="textColor" red="0.14758911729999999" green="0.18844762440000001" blue="0.1885907054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6wN-SY-MmI">
+                                <rect key="frame" x="30" y="230" width="150" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="9Ol-2O-hdJ"/>
+                                    <constraint firstAttribute="width" secondItem="6wN-SY-MmI" secondAttribute="height" multiplier="15:8" id="MFh-w5-bLa"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="UFs-hv-v2F" id="cpz-kG-mTd"/>
+                                    <outlet property="delegate" destination="UFs-hv-v2F" id="fJW-JJ-OBX"/>
+                                </connections>
+                            </pickerView>
+                            <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nWV-HU-4BL">
+                                <rect key="frame" x="210" y="230" width="153" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nWV-HU-4BL" secondAttribute="height" multiplier="153:80" id="hGh-SS-4yb"/>
+                                    <constraint firstAttribute="height" constant="80" id="lOj-eU-Nis"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="UFs-hv-v2F" id="Qi5-Zm-bWh"/>
+                                    <outlet property="delegate" destination="UFs-hv-v2F" id="ULu-gD-gYb"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Difficulty:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RCs-wv-0bX">
+                                <rect key="frame" x="30" y="209" width="150" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="RCs-wv-0bX" secondAttribute="height" multiplier="50:7" id="hQm-QG-JR6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Qwc-F8-nDZ"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="5FP-jL-udJ" firstAttribute="leading" secondItem="Qwc-F8-nDZ" secondAttribute="leading" constant="100" id="DIK-fZ-OtK"/>
-                            <constraint firstItem="Qwc-F8-nDZ" firstAttribute="trailing" secondItem="5FP-jL-udJ" secondAttribute="trailing" constant="100" id="VfV-uz-Kym"/>
-                            <constraint firstItem="5FP-jL-udJ" firstAttribute="top" secondItem="Qwc-F8-nDZ" secondAttribute="top" constant="80" id="fL6-nL-woE"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="QZ1-Xa-9Ma"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ibq-1G-oVd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-750" y="-313"/>
-        </scene>
-        <!--Hi-scores-->
-        <scene sceneID="L1U-ak-R3E">
-            <objects>
-                <viewController title="Hi-scores" id="eFJ-jg-j0r" customClass="HiScoresViewController" customModule="SwiftTyping" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="sYn-8z-khg">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi-scores" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvR-E8-wbZ">
-                                <rect key="frame" x="100" y="139" width="193" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Level:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7a-ko-FPs">
+                                <rect key="frame" x="210" y="209" width="153" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="b7a-ko-FPs" secondAttribute="height" multiplier="51:7" id="P9O-ah-hdo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbM-kd-bFN">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDJ-dD-dKC">
                                 <rect key="frame" x="152" y="648" width="89" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="To meny"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Return">
+                                    <fontDescription key="titleFontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="18"/>
+                                </buttonConfiguration>
                                 <connections>
-                                    <segue destination="q1M-ey-1XX" kind="unwind" unwindAction="unwindToStartWithSegue:" id="RRQ-xs-e4n"/>
+                                    <action selector="returnPressed:" destination="UFs-hv-v2F" eventType="touchUpInside" id="BHk-dR-BsM"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="OJM-J4-3nm"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="Qwc-F8-nDZ"/>
+                        <color key="backgroundColor" red="0.97254902119999997" green="0.97254902119999997" blue="0.97254902119999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.63726091380000005" green="0.40094196799999998" blue="0.25445276500000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="OJM-J4-3nm" firstAttribute="trailing" secondItem="dvR-E8-wbZ" secondAttribute="trailing" constant="100" id="Kk8-eV-TUN"/>
-                            <constraint firstItem="mbM-kd-bFN" firstAttribute="leading" secondItem="OJM-J4-3nm" secondAttribute="leading" constant="152" id="h0Y-nD-hB3"/>
-                            <constraint firstItem="OJM-J4-3nm" firstAttribute="trailing" secondItem="mbM-kd-bFN" secondAttribute="trailing" constant="152" id="iR2-eC-Kz7"/>
-                            <constraint firstItem="OJM-J4-3nm" firstAttribute="bottom" secondItem="mbM-kd-bFN" secondAttribute="bottom" constant="100" id="iqa-FI-zof"/>
-                            <constraint firstItem="dvR-E8-wbZ" firstAttribute="top" secondItem="OJM-J4-3nm" secondAttribute="top" constant="80" id="mao-EI-kCl"/>
-                            <constraint firstItem="dvR-E8-wbZ" firstAttribute="leading" secondItem="OJM-J4-3nm" secondAttribute="leading" constant="100" id="rQo-Lw-zJ5"/>
+                            <constraint firstItem="6wN-SY-MmI" firstAttribute="top" secondItem="RCs-wv-0bX" secondAttribute="bottom" id="5gE-qn-1pA"/>
+                            <constraint firstItem="6wN-SY-MmI" firstAttribute="leading" secondItem="Qwc-F8-nDZ" secondAttribute="leading" constant="30" id="899-d4-7Q2"/>
+                            <constraint firstItem="UDJ-dD-dKC" firstAttribute="leading" secondItem="Qwc-F8-nDZ" secondAttribute="leading" constant="152" id="DTe-5z-8UT"/>
+                            <constraint firstItem="RCs-wv-0bX" firstAttribute="leading" secondItem="6wN-SY-MmI" secondAttribute="leading" id="GLm-n1-hZh"/>
+                            <constraint firstItem="nWV-HU-4BL" firstAttribute="trailing" secondItem="b7a-ko-FPs" secondAttribute="trailing" id="IxV-12-yc0"/>
+                            <constraint firstItem="b7a-ko-FPs" firstAttribute="top" secondItem="5FP-jL-udJ" secondAttribute="bottom" constant="50" id="T4D-KM-Oct"/>
+                            <constraint firstItem="Qwc-F8-nDZ" firstAttribute="trailing" secondItem="5FP-jL-udJ" secondAttribute="trailing" id="V3D-q6-65G"/>
+                            <constraint firstItem="Qwc-F8-nDZ" firstAttribute="bottom" secondItem="UDJ-dD-dKC" secondAttribute="bottom" constant="100" id="ZaJ-PT-nLg"/>
+                            <constraint firstItem="Qwc-F8-nDZ" firstAttribute="trailing" secondItem="nWV-HU-4BL" secondAttribute="trailing" constant="30" id="bKB-b9-81b"/>
+                            <constraint firstItem="5FP-jL-udJ" firstAttribute="top" secondItem="Qwc-F8-nDZ" secondAttribute="top" constant="80" id="fL6-nL-woE"/>
+                            <constraint firstItem="Qwc-F8-nDZ" firstAttribute="trailing" secondItem="UDJ-dD-dKC" secondAttribute="trailing" constant="152" id="j2n-3c-BoG"/>
+                            <constraint firstItem="nWV-HU-4BL" firstAttribute="top" secondItem="b7a-ko-FPs" secondAttribute="bottom" id="qix-Ax-qEY"/>
+                            <constraint firstItem="5FP-jL-udJ" firstAttribute="leading" secondItem="Qwc-F8-nDZ" secondAttribute="leading" id="qnO-gd-UXo"/>
+                            <constraint firstItem="RCs-wv-0bX" firstAttribute="top" secondItem="5FP-jL-udJ" secondAttribute="bottom" constant="50" id="sVQ-pb-06R"/>
+                            <constraint firstItem="b7a-ko-FPs" firstAttribute="leading" secondItem="nWV-HU-4BL" secondAttribute="leading" id="tqu-eg-gGp"/>
+                            <constraint firstItem="nWV-HU-4BL" firstAttribute="leading" secondItem="6wN-SY-MmI" secondAttribute="trailing" constant="30" id="v8f-mb-PZh"/>
+                            <constraint firstItem="RCs-wv-0bX" firstAttribute="trailing" secondItem="6wN-SY-MmI" secondAttribute="trailing" id="zPw-Dv-vA1"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Cni-1l-3LF"/>
+                    <navigationItem key="navigationItem" id="QZ1-Xa-9Ma"/>
                     <connections>
-                        <outlet property="hiScoresLabel" destination="dvR-E8-wbZ" id="Iid-N6-KgL"/>
+                        <outlet property="difficultyPickerView" destination="6wN-SY-MmI" id="JxC-qR-GR8"/>
+                        <outlet property="startLevelPickerView" destination="nWV-HU-4BL" id="3iI-Qr-rYC"/>
+                        <segue destination="0Ua-A6-0d5" kind="unwind" identifier="unwindToStart" unwindAction="unwindToStartWithSegue:" id="uZh-eJ-Gi7"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dAl-8D-oBg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="q1M-ey-1XX" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ibq-1G-oVd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="0Ua-A6-0d5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-750" y="396"/>
+            <point key="canvasLocation" x="-750.38167938931292" y="-313.38028169014086"/>
+        </scene>
+        <!--Hi Score Table View Controller-->
+        <scene sceneID="LHO-i7-HDu">
+            <objects>
+                <tableViewController id="raC-0Z-umb" customClass="HiScoreTableViewController" customModule="SwiftTyping" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="MZz-ge-jGf">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.99999994039999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="scoreCell" id="cvi-N0-EeN" customClass="HiScoreTableViewCell" customModule="SwiftTyping" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="393" height="40.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cvi-N0-EeN" id="4OM-Do-5vo">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="40.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rank" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AcT-WX-Lv9">
+                                            <rect key="frame" x="30.000000000000004" y="10.000000000000002" width="49.333333333333343" height="20.666666666666671"/>
+                                            <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="17"/>
+                                            <color key="textColor" red="0.94482925259999995" green="0.62458657309999999" blue="0.32848215069999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDp-TP-hPQ">
+                                            <rect key="frame" x="130" y="10.000000000000002" width="54" height="20.666666666666671"/>
+                                            <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jID-24-Rqj">
+                                            <rect key="frame" x="247" y="10.000000000000002" width="46" height="20.666666666666671"/>
+                                            <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="17"/>
+                                            <color key="textColor" red="0.63726091380000005" green="0.40094196799999998" blue="0.25445276500000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="jID-24-Rqj" secondAttribute="bottom" constant="10" id="3Nj-rw-fxZ"/>
+                                        <constraint firstAttribute="bottom" secondItem="AcT-WX-Lv9" secondAttribute="bottom" constant="10" id="6vj-bO-TRp"/>
+                                        <constraint firstAttribute="trailing" secondItem="jID-24-Rqj" secondAttribute="trailing" constant="100" id="8q0-cT-TWI"/>
+                                        <constraint firstItem="rDp-TP-hPQ" firstAttribute="top" secondItem="4OM-Do-5vo" secondAttribute="top" constant="10" id="BA8-PW-A9b"/>
+                                        <constraint firstItem="jID-24-Rqj" firstAttribute="top" secondItem="4OM-Do-5vo" secondAttribute="top" constant="10" id="Ncp-hW-Wtf"/>
+                                        <constraint firstAttribute="bottom" secondItem="rDp-TP-hPQ" secondAttribute="bottom" constant="10" id="bvs-ek-Fdp"/>
+                                        <constraint firstItem="AcT-WX-Lv9" firstAttribute="leading" secondItem="4OM-Do-5vo" secondAttribute="leading" constant="30" id="dpv-R2-a0i"/>
+                                        <constraint firstItem="AcT-WX-Lv9" firstAttribute="top" secondItem="4OM-Do-5vo" secondAttribute="top" constant="10" id="gq2-GN-Xj5"/>
+                                        <constraint firstItem="rDp-TP-hPQ" firstAttribute="leading" secondItem="4OM-Do-5vo" secondAttribute="leading" constant="130" id="l5v-vc-cKM"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="jID-24-Rqj" id="oct-gs-hik"/>
+                                    <outlet property="rankLabel" destination="AcT-WX-Lv9" id="DoY-9y-BVN"/>
+                                    <outlet property="scoreLabel" destination="rDp-TP-hPQ" id="V6t-4G-UtL"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="raC-0Z-umb" id="CK0-bx-Ei7"/>
+                            <outlet property="delegate" destination="raC-0Z-umb" id="19U-hJ-YM2"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="yjK-d6-9Gt"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qLa-Rz-S30" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-790.07633587786256" y="497.88732394366201"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -91,62 +187,91 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MtD-dn-L0R">
-                                <rect key="frame" x="131.66666666666666" y="678" width="129.99999999999997" height="35"/>
+                                <rect key="frame" x="131.66666666666666" y="682.66666666666663" width="129.99999999999997" height="32.666666666666629"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="64b-BZ-21f"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Start game"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Start game">
+                                    <fontDescription key="titleFontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
+                                </buttonConfiguration>
                                 <connections>
-                                    <segue destination="Vdr-rR-YdC" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="fQZ-sB-kwG"/>
+                                    <action selector="startButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qpz-SV-dUy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MXh-b5-uLa">
-                                <rect key="frame" x="131.66666666666666" y="733" width="129.99999999999997" height="35"/>
+                                <rect key="frame" x="131.66666666666666" y="735.33333333333337" width="129.99999999999997" height="32.666666666666629"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="Iqe-VS-4VT"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="See hi-scores"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="See hi-scores">
+                                    <fontDescription key="titleFontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
+                                </buttonConfiguration>
                                 <connections>
-                                    <segue destination="eFJ-jg-j0r" kind="show" id="HNk-3O-AcU"/>
+                                    <segue destination="raC-0Z-umb" kind="show" id="PCf-1g-jW4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="74f-yN-4Lq">
-                                <rect key="frame" x="131.66666666666666" y="623" width="129.99999999999997" height="35"/>
+                                <rect key="frame" x="131.66666666666666" y="630.66666666666663" width="129.99999999999997" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="k5y-hF-PVG"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Edit settings"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Edit settings">
+                                    <fontDescription key="titleFontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <segue destination="UFs-hv-v2F" kind="show" id="Eue-wv-1JO"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SwiftTyping" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="80I-yB-zzQ">
-                                <rect key="frame" x="104.66666666666669" y="279" width="184" height="45"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
-                                <color key="textColor" name="AccentColor"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name:" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9bu-u2-rs8">
+                                <rect key="frame" x="0.0" y="555" width="393" height="45.666666666666629"/>
+                                <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dw21batch2-mynt-01.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="E6R-cR-Ybb">
+                                <rect key="frame" x="20" y="159" width="353" height="357"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="E6R-cR-Ybb" secondAttribute="height" multiplier="173:175" id="aYh-QR-lba"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swift Typing" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVA-UY-JqU">
+                                <rect key="frame" x="130" y="189" width="133" height="74"/>
+                                <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="31"/>
+                                <color key="textColor" red="0.12222132731958768" green="0.068718475625195424" blue="0.051411469984589779" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.97254902119999997" green="0.97254902119999997" blue="0.97254902119999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.63826916881443296" green="0.40340920814445103" blue="0.25437980783382913" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="80I-yB-zzQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3zZ-BD-9nJ"/>
+                            <constraint firstItem="oVA-UY-JqU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="130" id="0ie-CU-Ic6"/>
+                            <constraint firstItem="E6R-cR-Ybb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="7Pz-xT-YFQ"/>
                             <constraint firstItem="MXh-b5-uLa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E0R-ZJ-e2h"/>
                             <constraint firstItem="MtD-dn-L0R" firstAttribute="top" secondItem="74f-yN-4Lq" secondAttribute="bottom" constant="20" id="Ft6-ZF-3BB"/>
                             <constraint firstItem="MXh-b5-uLa" firstAttribute="top" secondItem="MtD-dn-L0R" secondAttribute="bottom" constant="20" id="HW2-Xy-thR"/>
+                            <constraint firstItem="E6R-cR-Ybb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ug8-2T-iO7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="E6R-cR-Ybb" secondAttribute="trailing" constant="20" id="Wuq-h7-9LN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9bu-u2-rs8" secondAttribute="trailing" id="XXB-Tg-mbj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oVA-UY-JqU" secondAttribute="trailing" constant="130" id="auE-eF-5y2"/>
+                            <constraint firstItem="74f-yN-4Lq" firstAttribute="top" secondItem="9bu-u2-rs8" secondAttribute="bottom" constant="30" id="bZF-g3-Y9W"/>
                             <constraint firstItem="74f-yN-4Lq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cMp-Ia-mU0"/>
-                            <constraint firstItem="80I-yB-zzQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="220" id="eIk-PY-rxw"/>
+                            <constraint firstItem="9bu-u2-rs8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="czs-ZE-FuK"/>
+                            <constraint firstItem="oVA-UY-JqU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="130" id="p3Y-m1-oQ5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MXh-b5-uLa" secondAttribute="bottom" constant="50" id="qyJ-ry-9uG"/>
                             <constraint firstItem="MtD-dn-L0R" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uB7-hZ-plS"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nameEdit" destination="9bu-u2-rs8" id="a3s-rG-cVS"/>
+                        <segue destination="Vdr-rR-YdC" kind="presentation" identifier="startGameSegue" id="BIh-5R-fHV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="-27"/>
+            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
         </scene>
         <!--Game Over View Controller-->
         <scene sceneID="yXV-SS-x7M">
@@ -158,33 +283,36 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Over" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t7d-CS-18a">
                                 <rect key="frame" x="0.0" y="159" width="393" height="62.333333333333343"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                                <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="52"/>
                                 <color key="textColor" systemColor="systemPinkColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your score:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmJ-Qb-MSn">
                                 <rect key="frame" x="0.0" y="271.33333333333331" width="393" height="32.333333333333314"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="27"/>
+                                <color key="textColor" red="0.14758911729999999" green="0.18844762440000001" blue="0.1885907054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8q-ZM-ElE">
                                 <rect key="frame" x="0.0" y="333.66666666666669" width="393" height="64.666666666666686"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="54"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="54"/>
+                                <color key="textColor" red="0.94482925259999995" green="0.62458657309999999" blue="0.32848215069999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EQm-72-VgW">
-                                <rect key="frame" x="140" y="668" width="113" height="35"/>
+                                <rect key="frame" x="140" y="670.33333333333337" width="113" height="32.666666666666629"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Save score"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Save score">
+                                    <fontDescription key="titleFontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="saveAndExit:" destination="MQa-Qy-lbi" eventType="touchUpInside" id="8tE-e5-ome"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Uss-IN-sgx"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.97254902119999997" green="0.97254902119999997" blue="0.97254902119999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.63726091380000005" green="0.40094196799999998" blue="0.25445276500000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Uss-IN-sgx" firstAttribute="trailing" secondItem="EQm-72-VgW" secondAttribute="trailing" constant="140" id="1c6-2T-LIq"/>
                             <constraint firstItem="t7d-CS-18a" firstAttribute="leading" secondItem="Uss-IN-sgx" secondAttribute="leading" id="8mA-a3-hwK"/>
@@ -202,6 +330,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Z99-Pb-jkB"/>
                     <connections>
+                        <outlet property="nameLabel" destination="dmJ-Qb-MSn" id="Jli-E5-g17"/>
                         <outlet property="scoreLabel" destination="k8q-ZM-ElE" id="1UA-lC-BF5"/>
                         <segue destination="7UU-Zu-g4b" kind="unwind" identifier="unWindSegue" unwindAction="unwindToStartWithSegue:" id="mZP-0t-Pb2"/>
                     </connections>
@@ -209,30 +338,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gzg-l3-oFR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="7UU-Zu-g4b" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1066" y="429"/>
+            <point key="canvasLocation" x="1053" y="498"/>
         </scene>
         <!--Game-->
         <scene sceneID="LA5-Qs-Lpy">
             <objects>
                 <viewController title="Game" id="Vdr-rR-YdC" customClass="GameViewController" customModule="SwiftTyping" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fvL-so-Maq">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MLc-ei-TK5">
-                                <rect key="frame" x="100" y="139" width="193" height="20.333333333333343"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" systemColor="systemPurpleColor"/>
+                                <rect key="frame" x="100" y="139" width="193" height="20"/>
+                                <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="17"/>
+                                <color key="textColor" red="0.14758911729999999" green="0.18844762440000001" blue="0.1885907054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ready?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaJ-XK-vbd">
-                                <rect key="frame" x="0.0" y="209.33333333333334" width="393" height="33.666666666666657"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <rect key="frame" x="0.0" y="209" width="393" height="33.666666666666657"/>
+                                <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="28"/>
                                 <color key="textColor" systemColor="systemOrangeColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lOj-Fc-dSV">
-                                <rect key="frame" x="100" y="733" width="193" height="35"/>
+                                <rect key="frame" x="100" y="698" width="193" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="New random word"/>
                                 <connections>
@@ -240,7 +369,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8df-cx-rCM">
-                                <rect key="frame" x="238" y="598" width="75" height="35"/>
+                                <rect key="frame" x="238" y="563" width="75" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Diff up"/>
                                 <connections>
@@ -248,7 +377,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zrt-Ae-bTe">
-                                <rect key="frame" x="80" y="598" width="97" height="35"/>
+                                <rect key="frame" x="80" y="563" width="97" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Diff down"/>
                                 <connections>
@@ -256,14 +385,14 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Difficulty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QaW-ZD-2SB">
-                                <rect key="frame" x="100" y="293" width="193" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" systemColor="systemGreenColor"/>
+                                <rect key="frame" x="100" y="317.66666666666669" width="193" height="20"/>
+                                <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="17"/>
+                                <color key="textColor" red="0.63726091380000005" green="0.40094196799999998" blue="0.25445276500000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Touch to start" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="95c-n6-rgm">
-                                <rect key="frame" x="0.0" y="451" width="393" height="45.666666666666686"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <rect key="frame" x="0.0" y="432.66666666666669" width="393" height="44.666666666666686"/>
+                                <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="textEdited:" destination="Vdr-rR-YdC" eventType="editingChanged" id="kEE-cb-z7d"/>
@@ -271,39 +400,47 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OcL-P1-XZq">
-                                <rect key="frame" x="100" y="344" width="193" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="100" y="357.66666666666669" width="193" height="20"/>
+                                <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="17"/>
+                                <color key="textColor" red="0.14758911729999999" green="0.18844762440000001" blue="0.1885907054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SGz-5E-sbW">
                                 <rect key="frame" x="40" y="79" width="20" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <color key="textColor" name="AccentColor"/>
+                                <color key="textColor" red="0.14758911729999999" green="0.18844762440000001" blue="0.1885907054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nS-9n-h6N">
-                                <rect key="frame" x="100" y="380" width="193" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="100" y="382.66666666666669" width="193" height="20"/>
+                                <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="17"/>
+                                <color key="textColor" red="0.14758911729999999" green="0.18844762440000001" blue="0.1885907054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MoT-TY-JVx">
+                                <rect key="frame" x="0.0" y="257.66666666666669" width="393" height="30"/>
+                                <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="25"/>
+                                <color key="textColor" red="0.14758911729999999" green="0.18844762440000001" blue="0.1885907054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DOq-Tg-HZb"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.97254902119999997" green="0.97254902119999997" blue="0.97254902119999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.63726091380000005" green="0.40094196799999998" blue="0.25445276500000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="DOq-Tg-HZb" firstAttribute="trailing" secondItem="lOj-Fc-dSV" secondAttribute="trailing" constant="100" id="1gx-9p-8qU"/>
                             <constraint firstItem="MLc-ei-TK5" firstAttribute="leading" secondItem="DOq-Tg-HZb" secondAttribute="leading" constant="100" id="4b9-fu-d68"/>
+                            <constraint firstItem="QaW-ZD-2SB" firstAttribute="top" secondItem="MoT-TY-JVx" secondAttribute="bottom" constant="30" id="6wR-ne-3PA"/>
                             <constraint firstItem="DOq-Tg-HZb" firstAttribute="trailing" secondItem="95c-n6-rgm" secondAttribute="trailing" id="8BS-fD-B7s"/>
                             <constraint firstItem="Zrt-Ae-bTe" firstAttribute="leading" secondItem="DOq-Tg-HZb" secondAttribute="leading" constant="80" id="8OW-p2-Fa2"/>
                             <constraint firstItem="DOq-Tg-HZb" firstAttribute="trailing" secondItem="OcL-P1-XZq" secondAttribute="trailing" constant="100" id="Alc-zY-qfe"/>
-                            <constraint firstItem="QaW-ZD-2SB" firstAttribute="top" secondItem="oaJ-XK-vbd" secondAttribute="bottom" constant="50" id="Dor-3I-nNh"/>
-                            <constraint firstItem="1nS-9n-h6N" firstAttribute="top" secondItem="OcL-P1-XZq" secondAttribute="bottom" constant="15" id="EnP-wt-h2u"/>
+                            <constraint firstItem="1nS-9n-h6N" firstAttribute="top" secondItem="OcL-P1-XZq" secondAttribute="bottom" constant="5" id="EnP-wt-h2u"/>
                             <constraint firstItem="lOj-Fc-dSV" firstAttribute="top" secondItem="8df-cx-rCM" secondAttribute="bottom" constant="100" id="Fu2-Hp-Q2e"/>
                             <constraint firstItem="DOq-Tg-HZb" firstAttribute="trailing" secondItem="1nS-9n-h6N" secondAttribute="trailing" constant="100" id="I9L-Ie-KKl"/>
                             <constraint firstItem="lOj-Fc-dSV" firstAttribute="top" secondItem="Zrt-Ae-bTe" secondAttribute="bottom" constant="100" id="JU5-3t-Vdo"/>
-                            <constraint firstItem="OcL-P1-XZq" firstAttribute="top" secondItem="QaW-ZD-2SB" secondAttribute="bottom" constant="30" id="MM3-GD-koV"/>
+                            <constraint firstItem="OcL-P1-XZq" firstAttribute="top" secondItem="QaW-ZD-2SB" secondAttribute="bottom" constant="20" id="MM3-GD-koV"/>
                             <constraint firstItem="QaW-ZD-2SB" firstAttribute="leading" secondItem="DOq-Tg-HZb" secondAttribute="leading" constant="100" id="NaZ-op-MNV"/>
+                            <constraint firstItem="MoT-TY-JVx" firstAttribute="leading" secondItem="DOq-Tg-HZb" secondAttribute="leading" id="NpK-NL-Pfv"/>
                             <constraint firstItem="DOq-Tg-HZb" firstAttribute="trailing" secondItem="QaW-ZD-2SB" secondAttribute="trailing" constant="100" id="TNJ-l9-dwC"/>
                             <constraint firstItem="oaJ-XK-vbd" firstAttribute="leading" secondItem="DOq-Tg-HZb" secondAttribute="leading" id="V2W-KM-mfc"/>
                             <constraint firstItem="DOq-Tg-HZb" firstAttribute="trailing" secondItem="8df-cx-rCM" secondAttribute="trailing" constant="80" id="aAQ-dH-BfB"/>
@@ -313,11 +450,13 @@
                             <constraint firstItem="SGz-5E-sbW" firstAttribute="top" secondItem="DOq-Tg-HZb" secondAttribute="top" constant="20" id="kbj-lU-Rhh"/>
                             <constraint firstItem="MLc-ei-TK5" firstAttribute="top" secondItem="DOq-Tg-HZb" secondAttribute="top" constant="80" id="mmj-fW-bLe"/>
                             <constraint firstItem="lOj-Fc-dSV" firstAttribute="leading" secondItem="DOq-Tg-HZb" secondAttribute="leading" constant="100" id="qyW-qP-Jdv"/>
-                            <constraint firstItem="95c-n6-rgm" firstAttribute="top" secondItem="1nS-9n-h6N" secondAttribute="bottom" constant="50" id="r6s-jl-Hdc"/>
+                            <constraint firstItem="95c-n6-rgm" firstAttribute="top" secondItem="1nS-9n-h6N" secondAttribute="bottom" constant="30" id="r6s-jl-Hdc"/>
                             <constraint firstItem="1nS-9n-h6N" firstAttribute="leading" secondItem="DOq-Tg-HZb" secondAttribute="leading" constant="100" id="rMe-nL-WvW"/>
+                            <constraint firstItem="MoT-TY-JVx" firstAttribute="top" secondItem="oaJ-XK-vbd" secondAttribute="bottom" constant="15" id="rci-NV-wHD"/>
                             <constraint firstItem="DOq-Tg-HZb" firstAttribute="bottom" secondItem="lOj-Fc-dSV" secondAttribute="bottom" constant="50" id="slR-ib-sSG"/>
                             <constraint firstItem="oaJ-XK-vbd" firstAttribute="top" secondItem="MLc-ei-TK5" secondAttribute="bottom" constant="50" id="t8X-d9-POz"/>
                             <constraint firstItem="OcL-P1-XZq" firstAttribute="leading" secondItem="DOq-Tg-HZb" secondAttribute="leading" constant="100" id="tqf-EE-I4K"/>
+                            <constraint firstItem="DOq-Tg-HZb" firstAttribute="trailing" secondItem="MoT-TY-JVx" secondAttribute="trailing" id="vaB-Lg-xhf"/>
                             <constraint firstItem="DOq-Tg-HZb" firstAttribute="trailing" secondItem="MLc-ei-TK5" secondAttribute="trailing" constant="100" id="vgP-Sv-bqp"/>
                         </constraints>
                     </view>
@@ -325,6 +464,7 @@
                     <connections>
                         <outlet property="editTextField" destination="95c-n6-rgm" id="QEc-QT-lC3"/>
                         <outlet property="levelLabel" destination="QaW-ZD-2SB" id="Ven-7t-VHS"/>
+                        <outlet property="nameLabel" destination="MoT-TY-JVx" id="UcT-5Y-wcI"/>
                         <outlet property="randomWordLabel" destination="oaJ-XK-vbd" id="cp5-dt-ubJ"/>
                         <outlet property="scoreLabel" destination="MLc-ei-TK5" id="sxz-tE-wiE"/>
                         <outlet property="timerLabel" destination="1nS-9n-h6N" id="iIA-0j-hkF"/>
@@ -333,27 +473,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bKT-YG-KJh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1055.7251908396945" y="-278.16901408450707"/>
+            <point key="canvasLocation" x="1053" y="-318"/>
         </scene>
     </scenes>
     <resources>
-        <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <image name="dw21batch2-mynt-01.jpg" width="1200" height="1200"/>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
