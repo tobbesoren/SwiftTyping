@@ -134,41 +134,38 @@
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="scoreCell" id="cvi-N0-EeN" customClass="HiScoreTableViewCell" customModule="SwiftTyping" customModuleProvider="target">
-                                <rect key="frame" x="20" y="55.333332061767578" width="353" height="41.333332061767578"/>
+                                <rect key="frame" x="20" y="55.333332061767578" width="353" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cvi-N0-EeN" id="4OM-Do-5vo">
-                                    <rect key="frame" x="0.0" y="0.0" width="353" height="41.333332061767578"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="353" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rank" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AcT-WX-Lv9">
-                                            <rect key="frame" x="30.000000000000004" y="9.9999999999999982" width="49.333333333333343" height="21.333333333333329"/>
+                                            <rect key="frame" x="20.000000000000004" y="11.666666666666666" width="49.333333333333343" height="20.333333333333336"/>
                                             <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="17"/>
                                             <color key="textColor" red="0.94482925259999995" green="0.62458657309999999" blue="0.32848215069999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDp-TP-hPQ">
-                                            <rect key="frame" x="149.66666666666666" y="9.9999999999999982" width="54" height="21.333333333333329"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="218" verticalHuggingPriority="209" text="Score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDp-TP-hPQ">
+                                            <rect key="frame" x="149.66666666666666" y="11.666666666666666" width="54" height="20.333333333333336"/>
                                             <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jID-24-Rqj">
-                                            <rect key="frame" x="277" y="9.9999999999999982" width="46" height="21.333333333333329"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="184" verticalHuggingPriority="201" text="Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jID-24-Rqj">
+                                            <rect key="frame" x="267" y="11.666666666666666" width="46" height="20.333333333333336"/>
                                             <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="17"/>
                                             <color key="textColor" red="0.63726091380000005" green="0.40094196799999998" blue="0.25445276500000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="jID-24-Rqj" secondAttribute="bottom" constant="10" id="3Nj-rw-fxZ"/>
-                                        <constraint firstAttribute="bottom" secondItem="AcT-WX-Lv9" secondAttribute="bottom" constant="10" id="6vj-bO-TRp"/>
-                                        <constraint firstAttribute="trailing" secondItem="jID-24-Rqj" secondAttribute="trailing" constant="30" id="8q0-cT-TWI"/>
-                                        <constraint firstItem="rDp-TP-hPQ" firstAttribute="centerX" secondItem="4OM-Do-5vo" secondAttribute="centerX" id="8uW-MS-bAj"/>
-                                        <constraint firstItem="rDp-TP-hPQ" firstAttribute="top" secondItem="4OM-Do-5vo" secondAttribute="top" constant="10" id="BA8-PW-A9b"/>
-                                        <constraint firstItem="jID-24-Rqj" firstAttribute="top" secondItem="4OM-Do-5vo" secondAttribute="top" constant="10" id="Ncp-hW-Wtf"/>
-                                        <constraint firstAttribute="bottom" secondItem="rDp-TP-hPQ" secondAttribute="bottom" constant="10" id="bvs-ek-Fdp"/>
-                                        <constraint firstItem="AcT-WX-Lv9" firstAttribute="leading" secondItem="4OM-Do-5vo" secondAttribute="leading" constant="30" id="dpv-R2-a0i"/>
-                                        <constraint firstItem="AcT-WX-Lv9" firstAttribute="top" secondItem="4OM-Do-5vo" secondAttribute="top" constant="10" id="gq2-GN-Xj5"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="jID-24-Rqj" secondAttribute="trailing" constant="20" id="6Fk-QD-6zb"/>
+                                        <constraint firstItem="AcT-WX-Lv9" firstAttribute="leading" secondItem="4OM-Do-5vo" secondAttribute="leading" constant="20" id="7cK-Rs-bme"/>
+                                        <constraint firstItem="AcT-WX-Lv9" firstAttribute="centerY" secondItem="4OM-Do-5vo" secondAttribute="centerY" id="KjB-Le-icd"/>
+                                        <constraint firstItem="rDp-TP-hPQ" firstAttribute="centerX" secondItem="4OM-Do-5vo" secondAttribute="centerX" id="XLV-Uu-vFh"/>
+                                        <constraint firstItem="rDp-TP-hPQ" firstAttribute="centerY" secondItem="4OM-Do-5vo" secondAttribute="centerY" id="huT-iO-chP"/>
+                                        <constraint firstItem="jID-24-Rqj" firstAttribute="centerY" secondItem="4OM-Do-5vo" secondAttribute="centerY" id="wUF-Ha-DyP"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <gestureRecognizers/>
@@ -390,9 +387,9 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ready?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaJ-XK-vbd">
-                                <rect key="frame" x="0.0" y="315" width="393" height="45.333333333333314"/>
-                                <fontDescription key="fontDescription" name="ChalkBoard" family="Chalk Board" pointSize="32"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abcdefghijklmnopqrstuvwxyzåäö" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaJ-XK-vbd">
+                                <rect key="frame" x="0.0" y="315" width="393" height="52.333333333333314"/>
+                                <fontDescription key="fontDescription" name="ChalkBoard" family="Chalk Board" pointSize="37"/>
                                 <color key="textColor" systemColor="systemOrangeColor"/>
                                 <nil key="highlightedColor"/>
                             </label>

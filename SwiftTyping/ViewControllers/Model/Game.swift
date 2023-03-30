@@ -126,6 +126,4 @@ class Game {
         let timeLeft = (Double(currentWord.count) * secondsPerLetter) + (4 - Double(difficulty))
         return timeLeft
     }
-    
-    
 }

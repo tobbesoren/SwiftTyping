@@ -5,9 +5,6 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>MomType.ttf</string>
-		<string>Creta_TRIAL.ttf</string>
-		<string>ContéScriptReduced.ttf</string>
-		<string>Coffee House.ttf</string>
 		<string>Chalk Board.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
