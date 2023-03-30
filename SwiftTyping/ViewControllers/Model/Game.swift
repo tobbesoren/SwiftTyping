@@ -9,8 +9,7 @@ import Foundation
 
 
 class Game {
-    let defaults = UserDefaults.standard
-    
+    let defaults = DefaultsHandler()
     let gameWords: GameWords
     var clock: Clock?
     
@@ -21,10 +20,9 @@ class Game {
     let timesUpFunction: () -> Void
     
     var score = 0
-    var level: Int = 3
+    var level: Int = 1
     var currentWord: String = ""
     var difficulty: Int = 1
-    var startLevel = 3
     var clearedWords = 0
     var gameRunning = false
     
@@ -41,14 +39,15 @@ class Game {
         self.levelFunction = levelFunction
         self.clockTickFunction = clockTickFunction
         self.timesUpFunction = timesUpFunction
-        self.difficulty = defaults.integer(forKey: "Difficulty")
-        self.level = defaults.integer(forKey: "StartLevel")
+        self.difficulty = defaults.getDifficulty()
+        self.level = defaults.getLevel()
+        
         gameWords = GameWords(level: level)
+        clock = Clock(clockTickFunction: clockTickFunction, timesUpFunction: gameOver)
     }
     
     func startGame() {
         gameRunning = true
-        clock = Clock(clockTickFunction: clockTickFunction, timesUpFunction: gameOver)
         newWord()
     }
     
@@ -62,17 +61,8 @@ class Game {
         enteredWord = word
     }
     
-    func setDifficulty(difficulty: Int) {
-        self.difficulty = difficulty
-    }
-    
-    func getDifficulty() -> Int {
-        return difficulty
-    }
-    
     func raiseLevel() {
-       
-        if level < 25 {
+       if level < 25 {
             level += 1
             gameWords.setWordLength(level: level)
             levelFunction(level)
@@ -87,23 +77,14 @@ class Game {
         }
     }
     
-    func getLevel() -> Int {
-        return level
-    }
-    
     func updateScore() {
         let newScore = difficulty * currentWord.count * (Int(clock?.timeLeft ?? 0) - Int(clock?.timeSpent ?? 0))
         score += newScore
         scoreFunction(score)
     }
     
-    
-//    func setCurrentWord() {
-//        currentWord = gameWords.getRandomWord()
-//    }
-    
     func checkWord() -> Bool{
-        //print(enteredWord)
+       
         if enteredWord == currentWord {
             clearedWords += 1
             updateScore()
@@ -126,22 +107,18 @@ class Game {
     
     func resetValues() {
         score = 0
-        level = 3
+        level = defaults.getLevel()
+        print(String(defaults.getLevel()))
         currentWord = ""
-        difficulty = 1
+        difficulty = defaults.getDifficulty()
         clearedWords = 0
         gameRunning = false
-        
+        gameWords.setWordLength(level: level)
     }
     
-    
-    
-    func startClock() {
-        clock?.startTimer(timeSet: calculateTime())
-    }
     
     func calculateTime() -> Double {
-        let secondsPerLetter = (1.0 - (Double(level) / 100))  * (0.7 - Double(difficulty) / 10)
+        let secondsPerLetter = (1.0 - (Double(level) / 50))  * (0.7 - Double(difficulty) / 8)
         let timeLeft = (Double(currentWord.count) * secondsPerLetter) + 2
         print(String(secondsPerLetter))
         return timeLeft

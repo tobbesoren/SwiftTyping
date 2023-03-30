@@ -25,7 +25,11 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        game = Game(scoreFunction: updateScoreLabel, randomWordFunction: updateWordLabel, levelFunction: updateLevelLabel, clockTickFunction: updateTimerLabel, timesUpFunction: timesUp)
+        game = Game(scoreFunction: updateScoreLabel,
+                    randomWordFunction: updateWordLabel,
+                    levelFunction: updateLevelLabel,
+                    clockTickFunction: updateTimerLabel,
+                    timesUpFunction: timesUp)
         
         editTextField.spellCheckingType = .no
         editTextField.autocorrectionType = .no
@@ -34,7 +38,7 @@ class GameViewController: UIViewController {
     }
     
     func setDifficultyLabel() -> String {
-        switch game?.getDifficulty() {
+        switch defaults.getDifficulty() {
         case 1: return "Easy"
         case 2: return "Normal"
         case 3: return "Hard"
@@ -94,7 +98,6 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func textEdited(_ sender: Any) {
-        
         game?.enteredWord = editTextField.text ?? ""
         if let game {
             if game.checkWord() {editTextField.text = ""}
