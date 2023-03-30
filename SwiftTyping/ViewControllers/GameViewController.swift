@@ -115,26 +115,17 @@ class GameViewController: UIViewController {
         player.playSound(soundPath: path ?? "")
         game?.setEnteredWord(word: editTextField.text ?? "")
         if let game {
+            //Maybe add penalty for typing errors
             if game.checkWord() {
                 editTextField.text = ""
                 path = Bundle.main.path(forResource: "mixkit-typewriter-classic-return-1381", ofType:"wav")
                 player.playSound(soundPath: path ?? "")
+                wordCount = 0
             }
         }
     }
     
-//    func playSound(soundPath: String) {
-//        if soundPath == "" {return}
-//        let url = URL(fileURLWithPath: soundPath)
-//
-//        do {
-//            player = try AVAudioPlayer(contentsOf: url)
-//            player?.play()
-//            
-//        } catch let error {
-//            print(error.localizedDescription)
-//        }
-//    }
+
     
     @IBAction func diffDownPressed(_ sender: Any) {
         game?.decreaseLevel()
