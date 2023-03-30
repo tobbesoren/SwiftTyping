@@ -8,46 +8,56 @@
 import Foundation
 
 
-class defaultsHandler {
+class DefaultsHandler {
     private let defaults = UserDefaults.standard
     private var name: String
     private var difficulty: Int
     private var level: Int
     private var hiScores: [[String]]
     
+    private let nameString = "PlayerName"
+    private let difficultyString = "Difficulty"
+    private let levelString = "StartLevel"
+    private let HiScoreString = "HiScores"
+    
     init() {
-        self.name = defaults.object(forKey: "PlayerName") as? String ?? "Incognito"
-        self.difficulty = defaults.integer(forKey: "Difficulty")
-        self.level = defaults.integer(forKey: "StartLevel")
-        self.hiScores = defaults.object(forKey: "HiScores") as? [[String]] ?? [[String]]()
+        self.name = defaults.object(forKey: nameString) as? String ?? "Incognito"
+        self.difficulty = defaults.integer(forKey: difficultyString)
+        self.level = defaults.integer(forKey: levelString)
+        self.hiScores = defaults.object(forKey: HiScoreString) as? [[String]] ?? [[String]]()
     }
     
-    func setName() {
-        
+    func setName(name: String) {
+        self.name = name
+        self.defaults.set(name, forKey: nameString)
     }
     
     func getName() -> String {
         return self.name
     }
     
-    func setDifficulty() {
-        
+    func setDifficulty(difficulty: Int) {
+        self.difficulty = difficulty
+        self.defaults.set(difficulty, forKey: difficultyString)
     }
     
     func getDifficulty() -> Int {
         return self.difficulty
     }
     
-    func setLevel() {
-        
+    func setLevel(level: Int) {
+        self.level = level
+        self.defaults.set(level, forKey: levelString)
     }
     
     func getLevel() -> Int {
         return self.level
     }
     
-    func sddHiScore() {
-        
+    func addHiScore(newScore: [String]) {
+        self.hiScores.append(newScore)
+        self.hiScores.sort(by: {Int($0[0] ) ?? 0 > Int($1[0] ) ?? 0})
+        self.defaults.set(self.hiScores, forKey: HiScoreString)
     }
     
     func getHiScores() -> [[String]] {
