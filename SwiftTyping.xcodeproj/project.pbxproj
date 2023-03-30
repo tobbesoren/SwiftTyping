@@ -10,6 +10,11 @@
 		9C0820B729D5A51F0053CD12 /* UserDefaultHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0820B629D5A51F0053CD12 /* UserDefaultHandler.swift */; };
 		9C0820B929D607800053CD12 /* school-blackboard.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CDED3CF29D5810E00DDA9A7 /* school-blackboard.jpg */; };
 		9C0820BA29D6078B0053CD12 /* dw21batch2-mynt-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CDED3CE29D580D500DDA9A7 /* dw21batch2-mynt-01.jpg */; };
+		9C4B189529D62B080083BAD7 /* mixkit-typewriter-classic-return-1381.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9C4B189129D62B080083BAD7 /* mixkit-typewriter-classic-return-1381.wav */; };
+		9C4B189629D62B080083BAD7 /* mixkit-typewriter-hard-hit-1367.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9C4B189229D62B080083BAD7 /* mixkit-typewriter-hard-hit-1367.wav */; };
+		9C4B189729D62B080083BAD7 /* mixkit-mechanical-typewriter-single-hit-1382.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9C4B189329D62B080083BAD7 /* mixkit-mechanical-typewriter-single-hit-1382.wav */; };
+		9C4B189829D62B080083BAD7 /* mixkit-typewriter-soft-hit-1366.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9C4B189429D62B080083BAD7 /* mixkit-typewriter-soft-hit-1366.wav */; };
+		9C4B189A29D62F610083BAD7 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4B189929D62F610083BAD7 /* SoundPlayer.swift */; };
 		9C9F931E29C9E42A0029CA22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F931D29C9E42A0029CA22 /* AppDelegate.swift */; };
 		9C9F932029C9E42A0029CA22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F931F29C9E42A0029CA22 /* SceneDelegate.swift */; };
 		9C9F932229C9E42A0029CA22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F932129C9E42A0029CA22 /* ViewController.swift */; };
@@ -52,6 +57,11 @@
 
 /* Begin PBXFileReference section */
 		9C0820B629D5A51F0053CD12 /* UserDefaultHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultHandler.swift; sourceTree = "<group>"; };
+		9C4B189129D62B080083BAD7 /* mixkit-typewriter-classic-return-1381.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "mixkit-typewriter-classic-return-1381.wav"; path = "../../../../../Downloads/mixkit-typewriter-classic-return-1381.wav"; sourceTree = "<group>"; };
+		9C4B189229D62B080083BAD7 /* mixkit-typewriter-hard-hit-1367.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "mixkit-typewriter-hard-hit-1367.wav"; path = "../../../../../Downloads/mixkit-typewriter-hard-hit-1367.wav"; sourceTree = "<group>"; };
+		9C4B189329D62B080083BAD7 /* mixkit-mechanical-typewriter-single-hit-1382.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "mixkit-mechanical-typewriter-single-hit-1382.wav"; path = "../../../../../Downloads/mixkit-mechanical-typewriter-single-hit-1382.wav"; sourceTree = "<group>"; };
+		9C4B189429D62B080083BAD7 /* mixkit-typewriter-soft-hit-1366.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "mixkit-typewriter-soft-hit-1366.wav"; path = "../../../../../Downloads/mixkit-typewriter-soft-hit-1366.wav"; sourceTree = "<group>"; };
+		9C4B189929D62F610083BAD7 /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
 		9C9F931A29C9E42A0029CA22 /* SwiftTyping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTyping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C9F931D29C9E42A0029CA22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C9F931F29C9E42A0029CA22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +116,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C4B189029D62AD50083BAD7 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				9C4B189329D62B080083BAD7 /* mixkit-mechanical-typewriter-single-hit-1382.wav */,
+				9C4B189129D62B080083BAD7 /* mixkit-typewriter-classic-return-1381.wav */,
+				9C4B189229D62B080083BAD7 /* mixkit-typewriter-hard-hit-1367.wav */,
+				9C4B189429D62B080083BAD7 /* mixkit-typewriter-soft-hit-1366.wav */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
 		9C9F931129C9E42A0029CA22 = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +150,7 @@
 		9C9F931C29C9E42A0029CA22 /* SwiftTyping */ = {
 			isa = PBXGroup;
 			children = (
+				9C4B189029D62AD50083BAD7 /* Sound */,
 				9CDED3CD29D580CA00DDA9A7 /* Images */,
 				9C9F93B729D0ABE70029CA22 /* Fonts */,
 				9C9F936129CB934A0029CA22 /* ViewControllers */,
@@ -181,6 +203,7 @@
 				9C9F935F29CA23600029CA22 /* Game.swift */,
 				9C9F93B129CFAA690029CA22 /* HiScoreTableViewCell.swift */,
 				9C0820B629D5A51F0053CD12 /* UserDefaultHandler.swift */,
+				9C4B189929D62F610083BAD7 /* SoundPlayer.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -312,11 +335,15 @@
 				9CDED3DF29D5927800DDA9A7 /* blackboard_set.jpg in Resources */,
 				9C9F932A29C9E42B0029CA22 /* LaunchScreen.storyboard in Resources */,
 				9CDED3D929D58FA400DDA9A7 /* Assets.xcassets in Resources */,
+				9C4B189729D62B080083BAD7 /* mixkit-mechanical-typewriter-single-hit-1382.wav in Resources */,
 				9C0820BA29D6078B0053CD12 /* dw21batch2-mynt-01.jpg in Resources */,
 				9C9F93B929D0AC010029CA22 /* MomType.ttf in Resources */,
 				9C9F935A29CA03650029CA22 /* svenska-ord.txt in Resources */,
+				9C4B189629D62B080083BAD7 /* mixkit-typewriter-hard-hit-1367.wav in Resources */,
+				9C4B189529D62B080083BAD7 /* mixkit-typewriter-classic-return-1381.wav in Resources */,
 				9CDED3D229D5855000DDA9A7 /* Chalk Board.ttf in Resources */,
 				9C9F932529C9E42A0029CA22 /* Main.storyboard in Resources */,
+				9C4B189829D62B080083BAD7 /* mixkit-typewriter-soft-hit-1366.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +368,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C4B189A29D62F610083BAD7 /* SoundPlayer.swift in Sources */,
 				9C9F936029CA23600029CA22 /* Game.swift in Sources */,
 				9C9F935C29CA09690029CA22 /* GameWords.swift in Sources */,
 				9C9F935E29CA193C0029CA22 /* Clock.swift in Sources */,

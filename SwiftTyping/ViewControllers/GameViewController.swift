@@ -6,12 +6,16 @@
 //
 
 import UIKit
+import AVFoundation
 
 class GameViewController: UIViewController {
     
     var game: Game?
    
     let defaults = DefaultsHandler()
+    
+    var player = SoundPlayer()
+    var wordCount = 0
     
     
     @IBOutlet weak var scoreLabel: UILabel!
@@ -98,11 +102,39 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func textEdited(_ sender: Any) {
+        var path: String?
+        if editTextField.text?.count ?? 0 < wordCount {
+            print("Soft")
+            path = Bundle.main.path(forResource: "mixkit-typewriter-soft-hit-1366", ofType:"wav")
+            
+        } else if editTextField.text?.count ?? 0 > wordCount {
+            print("Hard")
+            path = Bundle.main.path(forResource: "mixkit-mechanical-typewriter-single-hit-1382", ofType:"wav")
+        }
+        wordCount = editTextField.text?.count ?? 0
+        player.playSound(soundPath: path ?? "")
         game?.setEnteredWord(word: editTextField.text ?? "")
         if let game {
-            if game.checkWord() {editTextField.text = ""}
+            if game.checkWord() {
+                editTextField.text = ""
+                path = Bundle.main.path(forResource: "mixkit-typewriter-classic-return-1381", ofType:"wav")
+                player.playSound(soundPath: path ?? "")
+            }
         }
     }
+    
+//    func playSound(soundPath: String) {
+//        if soundPath == "" {return}
+//        let url = URL(fileURLWithPath: soundPath)
+//
+//        do {
+//            player = try AVAudioPlayer(contentsOf: url)
+//            player?.play()
+//            
+//        } catch let error {
+//            print(error.localizedDescription)
+//        }
+//    }
     
     @IBAction func diffDownPressed(_ sender: Any) {
         game?.decreaseLevel()

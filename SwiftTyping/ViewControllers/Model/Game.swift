@@ -89,7 +89,7 @@ class Game {
     
     func checkWord() -> Bool{
        
-        if enteredWord == currentWord {
+        if enteredWord == currentWord && enteredWord != "" {
             clearedWords += 1
             updateScore()
             checkForLevelUp()
