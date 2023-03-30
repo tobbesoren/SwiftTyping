@@ -21,6 +21,17 @@ class ViewController: UIViewController {
         if defaults.getName() != "Incognito" {
             nameEdit.text = defaults.getName()
         }
+        setLabels()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        defaults.updateDefaults()
+        setLabels()
+    }
+    
+    func setLabels() {
+        difficultyLabel.text = defaults.getDifficultyString()
+        startLevelLabel.text = "Level: \(String(defaults.getLevel()))"
     }
     
     

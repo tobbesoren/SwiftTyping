@@ -15,12 +15,19 @@ class DefaultsHandler {
     private var level: Int
     private var hiScores: [[String]]
     
-    private let nameString = "PlayerName"
-    private let difficultyString = "Difficulty"
-    private let levelString = "StartLevel"
-    private let HiScoreString = "HiScores"
+    let nameString = "PlayerName"
+    let difficultyString = "Difficulty"
+    let levelString = "StartLevel"
+    let HiScoreString = "HiScores"
     
     init() {
+        self.name = defaults.object(forKey: nameString) as? String ?? "Incognito"
+        self.difficulty = defaults.integer(forKey: difficultyString)
+        self.level = defaults.integer(forKey: levelString)
+        self.hiScores = defaults.object(forKey: HiScoreString) as? [[String]] ?? [[String]]()
+    }
+    
+    func updateDefaults() {
         self.name = defaults.object(forKey: nameString) as? String ?? "Incognito"
         self.difficulty = defaults.integer(forKey: difficultyString)
         self.level = defaults.integer(forKey: levelString)
@@ -39,6 +46,7 @@ class DefaultsHandler {
     func setDifficulty(difficulty: Int) {
         self.difficulty = difficulty
         self.defaults.set(difficulty, forKey: difficultyString)
+   
     }
     
     func getDifficulty() -> Int {
@@ -63,4 +71,14 @@ class DefaultsHandler {
     func getHiScores() -> [[String]] {
         return self.hiScores
     }
+    
+    func getDifficultyString() -> String {
+        switch self.difficulty {
+        case 1: return "Easy"
+        case 2: return "Normal"
+        case 3: return "Hard"
+        default: return ""
+        }
+    }
+    
 }

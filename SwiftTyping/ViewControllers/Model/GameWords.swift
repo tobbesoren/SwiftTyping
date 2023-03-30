@@ -10,11 +10,11 @@ import Foundation
 class GameWords {
     
     private var wordDict: [Int: [String]] = [:]
-    private var level: Int
+    private var wordLength: Int
     private var currentWordList = [String]()
     
     init(level: Int) {
-        self.level = level
+        self.wordLength = level + 3
         let filePath = Bundle.main.path(forResource: "svenska-ord", ofType: "txt");
             let URL = NSURL.fileURL(withPath: filePath!)
 
@@ -43,8 +43,8 @@ class GameWords {
     
     private func setCurrentWordList() {
         var wordList = [String]()
-        let maxWordLength = level + 3
-        for key in level...maxWordLength {
+        let maxWordLength = wordLength + 3
+        for key in wordLength...maxWordLength {
             if let newList = wordDict[key] {
                 wordList += newList
             }
@@ -52,13 +52,13 @@ class GameWords {
         currentWordList = wordList
     }
     
-    func setLevel(level: Int) {
-        self.level = level
+    func setWordLength(level: Int) {
+        self.wordLength = level + 3
         setCurrentWordList()
     }
     
-    func getLevel() -> Int {
-        return level
+    func getWordLength() -> Int {
+        return wordLength
     }
 
     func getRandomWord() -> String {

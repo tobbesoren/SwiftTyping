@@ -418,7 +418,6 @@
                                 <buttonConfiguration key="configuration" style="gray" title="Diff down"/>
                                 <connections>
                                     <action selector="diffDownPressed:" destination="Vdr-rR-YdC" eventType="touchUpInside" id="wD1-bV-6hQ"/>
-                                    <action selector="randomButtonPressed:" destination="Vdr-rR-YdC" eventType="touchUpInside" id="m07-J3-Q4Y"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QaW-ZD-2SB">

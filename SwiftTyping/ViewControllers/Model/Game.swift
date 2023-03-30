@@ -41,8 +41,8 @@ class Game {
         self.levelFunction = levelFunction
         self.clockTickFunction = clockTickFunction
         self.timesUpFunction = timesUpFunction
-        self.difficulty = defaults.integer(forKey: "Difficulty") + 1
-        self.level = defaults.integer(forKey: "StartLevel") + 3
+        self.difficulty = defaults.integer(forKey: "Difficulty")
+        self.level = defaults.integer(forKey: "StartLevel")
         gameWords = GameWords(level: level)
     }
     
@@ -72,17 +72,17 @@ class Game {
     
     func raiseLevel() {
        
-        if level < 27 {
+        if level < 25 {
             level += 1
-            gameWords.setLevel(level: level)
+            gameWords.setWordLength(level: level)
             levelFunction(level)
         }
     }
     
     func decreaseLevel() {
-        if level > 3 {
+        if level > 1 {
             level -= 1
-            gameWords.setLevel(level: level)
+            gameWords.setWordLength(level: level)
             levelFunction(level)
         }
     }
@@ -94,15 +94,13 @@ class Game {
     func updateScore() {
         let newScore = difficulty * currentWord.count * (Int(clock?.timeLeft ?? 0) - Int(clock?.timeSpent ?? 0))
         score += newScore
-//        print("level:", level, "difficulty:", difficulty, "wordLength:", String(currentWord.count), "time:",  String(Int(clock?.timeLeft ?? 0) - Int(clock?.timeSpent ?? 0)))
-//        print(newScore)
         scoreFunction(score)
     }
     
     
-    func setCurrentWord() {
-        currentWord = gameWords.getRandomWord()
-    }
+//    func setCurrentWord() {
+//        currentWord = gameWords.getRandomWord()
+//    }
     
     func checkWord() -> Bool{
         //print(enteredWord)

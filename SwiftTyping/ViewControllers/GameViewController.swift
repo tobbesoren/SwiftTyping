@@ -10,7 +10,8 @@ import UIKit
 class GameViewController: UIViewController {
     
     var game: Game?
-    let defaults = UserDefaults.standard
+    //let defaults = UserDefaults.standard
+    let defaults = DefaultsHandler()
     
     
     @IBOutlet weak var scoreLabel: UILabel!
@@ -26,15 +27,10 @@ class GameViewController: UIViewController {
         
         game = Game(scoreFunction: updateScoreLabel, randomWordFunction: updateWordLabel, levelFunction: updateLevelLabel, clockTickFunction: updateTimerLabel, timesUpFunction: timesUp)
         
-        if let name: String = defaults.object(forKey: "PlayerName") as? String {
-            nameLabel.text = "Player: \(name)"
-        }
-        
-        updateLevelLabel(level: (game?.gameWords.getLevel() ?? 0))
-        updateScoreLabel(score: 0)
-        difficultyLabel.text = setDifficultyLabel()
         editTextField.spellCheckingType = .no
         editTextField.autocorrectionType = .no
+        
+        resetLabels()
     }
     
     func setDifficultyLabel() -> String {
@@ -47,6 +43,17 @@ class GameViewController: UIViewController {
         
     }
     
+    func resetLabels() {
+        nameLabel.text = defaults.getName()
+        updateLevelLabel(level: defaults.getLevel())
+        updateScoreLabel(score: 0)
+        difficultyLabel.text = setDifficultyLabel()
+        timerLabel.text = "0"
+        randomWordLabel.text = "Ready?"
+        editTextField.text = ""
+        editTextField.placeholder = "Tap to start"
+    }
+    
     func updateScoreLabel(score: Int) {
         scoreLabel.text = "Score: \(String(score))"
     }
@@ -56,7 +63,7 @@ class GameViewController: UIViewController {
     }
     
     func updateLevelLabel(level: Int) {
-        levelLabel.text = "Level: \(String(level - 2))"
+        levelLabel.text = "Level: \(String(level))"
     }
     
     func updateTimerLabel() {
@@ -67,13 +74,7 @@ class GameViewController: UIViewController {
     func timesUp() {
         performSegue(withIdentifier: "GameOverSegue", sender: nil)
         game?.resetValues()
-        randomWordLabel.text = "Ready?"
-        scoreLabel.text = "Score"
-        timerLabel.text = "0"
-        levelLabel.text = String(game?.gameWords.getLevel() ?? 0)
-        scoreLabel.text = String(game?.score ?? 0)
-        editTextField.text = ""
-        
+        resetLabels()
     }
     
     
