@@ -30,7 +30,7 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             defaults.set(3, forKey: "StartLevel")
         }
         startLevel = defaults.integer(forKey: "StartLevel")
-        print(String(difficulty ?? 0), String(startLevel ?? 0))
+       
         picker1Options = ["Easy", "Normal", "Hard"]
         for level in 1...25 {
             picker2Options.append(String(level))
