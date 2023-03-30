@@ -14,7 +14,7 @@ class GameWords {
     private var currentWordList = [String]()
     
     init(level: Int) {
-        self.wordLength = level + 3
+        self.wordLength = level + 2
         let filePath = Bundle.main.path(forResource: "svenska-ord", ofType: "txt");
             let URL = NSURL.fileURL(withPath: filePath!)
 
@@ -52,7 +52,7 @@ class GameWords {
     }
     
     func setWordLength(level: Int) {
-        self.wordLength = level + 3
+        self.wordLength = level + 2
         setCurrentWordList()
     }
     

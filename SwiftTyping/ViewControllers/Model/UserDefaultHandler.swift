@@ -80,5 +80,4 @@ class DefaultsHandler {
         default: return ""
         }
     }
-    
 }

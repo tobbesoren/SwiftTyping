@@ -98,7 +98,7 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func textEdited(_ sender: Any) {
-        game?.enteredWord = editTextField.text ?? ""
+        game?.setEnteredWord(word: editTextField.text ?? "")
         if let game {
             if game.checkWord() {editTextField.text = ""}
         }
@@ -116,7 +116,7 @@ class GameViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "GameOverSegue" {
             if let destinationVC = segue.destination as? GameOverViewController {
-               destinationVC.score = game?.score
+               destinationVC.score = game?.getScore()
             }
         }
     }

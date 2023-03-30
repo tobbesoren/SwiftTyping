@@ -9,24 +9,24 @@ import Foundation
 
 
 class Game {
-    let defaults = DefaultsHandler()
-    let gameWords: GameWords
+    private let defaults = DefaultsHandler()
+    private let gameWords: GameWords
     var clock: Clock?
     
-    let scoreFunction: (Int) -> Void
-    let randomWordFunction: (String) -> Void
-    let levelFunction: (Int) -> Void
-    let clockTickFunction: () -> Void
-    let timesUpFunction: () -> Void
+    private let scoreFunction: (Int) -> Void
+    private let randomWordFunction: (String) -> Void
+    private let levelFunction: (Int) -> Void
+    private let clockTickFunction: () -> Void
+    private let timesUpFunction: () -> Void
     
-    var score = 0
-    var level: Int = 1
-    var currentWord: String = ""
-    var difficulty: Int = 1
-    var clearedWords = 0
+    private var score = 0
+    private var level: Int = 1
+    private var currentWord: String = ""
+    private var difficulty: Int = 1
+    private var clearedWords = 0
     var gameRunning = false
     
-    var enteredWord = ""
+    private var enteredWord = ""
     
 
     init(scoreFunction: @escaping (Int) -> Void,
@@ -59,6 +59,10 @@ class Game {
     
     func setEnteredWord(word: String) {
         enteredWord = word
+    }
+    
+    func getScore() -> Int {
+        return score
     }
     
     func raiseLevel() {
@@ -118,9 +122,8 @@ class Game {
     
     
     func calculateTime() -> Double {
-        let secondsPerLetter = (1.0 - (Double(level) / 50))  * (0.7 - Double(difficulty) / 8)
-        let timeLeft = (Double(currentWord.count) * secondsPerLetter) + 2
-        print(String(secondsPerLetter))
+        let secondsPerLetter = (1.0 - (Double(level) / 100))  * (0.7 - Double(difficulty) / 8)
+        let timeLeft = (Double(currentWord.count) * secondsPerLetter) + (4 - Double(difficulty))
         return timeLeft
     }
     
