@@ -19,6 +19,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var editTextField: UITextField!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var difficultyLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,17 @@ class GameViewController: UIViewController {
         
         levelLabel.text = "Level: \(String(((game?.gameWords.getLevel() ?? 0) - 2) ))"
         scoreLabel.text = String(game?.score ?? 0)
+        difficultyLabel.text = setLevelLabel()
+    }
+    
+    func setLevelLabel() -> String {
+        switch game?.getDifficulty() {
+        case 1: return "Easy"
+        case 2: return "Normal"
+        case 3: return "Hard"
+        default: return ""
+        }
+        
     }
     
     func updateScoreLabel(score: Int) {

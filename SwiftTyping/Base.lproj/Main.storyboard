@@ -22,13 +22,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5FP-jL-udJ">
-                                <rect key="frame" x="0.0" y="139" width="393" height="20"/>
-                                <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="17"/>
+                                <rect key="frame" x="0.0" y="309" width="393" height="39.666666666666686"/>
+                                <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="34"/>
                                 <color key="textColor" red="0.14758911729999999" green="0.18844762440000001" blue="0.1885907054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6wN-SY-MmI">
-                                <rect key="frame" x="30" y="230" width="150" height="80"/>
+                                <rect key="frame" x="30" y="419.66666666666669" width="150" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="9Ol-2O-hdJ"/>
                                     <constraint firstAttribute="width" secondItem="6wN-SY-MmI" secondAttribute="height" multiplier="15:8" id="MFh-w5-bLa"/>
@@ -39,7 +39,7 @@
                                 </connections>
                             </pickerView>
                             <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nWV-HU-4BL">
-                                <rect key="frame" x="210" y="230" width="153" height="80"/>
+                                <rect key="frame" x="210" y="419.66666666666669" width="153" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="nWV-HU-4BL" secondAttribute="height" multiplier="153:80" id="hGh-SS-4yb"/>
                                     <constraint firstAttribute="height" constant="80" id="lOj-eU-Nis"/>
@@ -50,7 +50,7 @@
                                 </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Difficulty:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RCs-wv-0bX">
-                                <rect key="frame" x="30" y="209" width="150" height="21"/>
+                                <rect key="frame" x="30" y="398.66666666666669" width="150" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="RCs-wv-0bX" secondAttribute="height" multiplier="50:7" id="hQm-QG-JR6"/>
                                 </constraints>
@@ -59,7 +59,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Level:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7a-ko-FPs">
-                                <rect key="frame" x="210" y="209" width="153" height="21"/>
+                                <rect key="frame" x="210" y="398.66666666666669" width="153" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="b7a-ko-FPs" secondAttribute="height" multiplier="51:7" id="P9O-ah-hdo"/>
                                 </constraints>
@@ -77,6 +77,15 @@
                                     <action selector="returnPressed:" destination="UFs-hv-v2F" eventType="touchUpInside" id="BHk-dR-BsM"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Difficulty affects timer. Level affects word length." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wR7-rQ-NSG">
+                                <rect key="frame" x="91.666666666666686" y="529.66666666666663" width="210" height="54.666666666666629"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="210" id="Ofk-vv-BoJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
+                                <color key="textColor" red="0.94482925259999995" green="0.62458657309999999" blue="0.32848215069999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Qwc-F8-nDZ"/>
                         <color key="backgroundColor" red="0.97254902119999997" green="0.97254902119999997" blue="0.97254902119999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -87,11 +96,13 @@
                             <constraint firstItem="UDJ-dD-dKC" firstAttribute="leading" secondItem="Qwc-F8-nDZ" secondAttribute="leading" constant="152" id="DTe-5z-8UT"/>
                             <constraint firstItem="RCs-wv-0bX" firstAttribute="leading" secondItem="6wN-SY-MmI" secondAttribute="leading" id="GLm-n1-hZh"/>
                             <constraint firstItem="nWV-HU-4BL" firstAttribute="trailing" secondItem="b7a-ko-FPs" secondAttribute="trailing" id="IxV-12-yc0"/>
+                            <constraint firstItem="wR7-rQ-NSG" firstAttribute="centerX" secondItem="av6-g2-Dcc" secondAttribute="centerX" id="KKY-XK-jJm"/>
                             <constraint firstItem="b7a-ko-FPs" firstAttribute="top" secondItem="5FP-jL-udJ" secondAttribute="bottom" constant="50" id="T4D-KM-Oct"/>
                             <constraint firstItem="Qwc-F8-nDZ" firstAttribute="trailing" secondItem="5FP-jL-udJ" secondAttribute="trailing" id="V3D-q6-65G"/>
+                            <constraint firstItem="wR7-rQ-NSG" firstAttribute="top" secondItem="6wN-SY-MmI" secondAttribute="bottom" constant="30" id="X3p-HY-HsO"/>
                             <constraint firstItem="Qwc-F8-nDZ" firstAttribute="bottom" secondItem="UDJ-dD-dKC" secondAttribute="bottom" constant="100" id="ZaJ-PT-nLg"/>
                             <constraint firstItem="Qwc-F8-nDZ" firstAttribute="trailing" secondItem="nWV-HU-4BL" secondAttribute="trailing" constant="30" id="bKB-b9-81b"/>
-                            <constraint firstItem="5FP-jL-udJ" firstAttribute="top" secondItem="Qwc-F8-nDZ" secondAttribute="top" constant="80" id="fL6-nL-woE"/>
+                            <constraint firstItem="5FP-jL-udJ" firstAttribute="top" secondItem="Qwc-F8-nDZ" secondAttribute="top" constant="250" id="fL6-nL-woE"/>
                             <constraint firstItem="Qwc-F8-nDZ" firstAttribute="trailing" secondItem="UDJ-dD-dKC" secondAttribute="trailing" constant="152" id="j2n-3c-BoG"/>
                             <constraint firstItem="nWV-HU-4BL" firstAttribute="top" secondItem="b7a-ko-FPs" secondAttribute="bottom" id="qix-Ax-qEY"/>
                             <constraint firstItem="5FP-jL-udJ" firstAttribute="leading" secondItem="Qwc-F8-nDZ" secondAttribute="leading" id="qnO-gd-UXo"/>
@@ -117,32 +128,32 @@
         <scene sceneID="LHO-i7-HDu">
             <objects>
                 <tableViewController id="raC-0Z-umb" customClass="HiScoreTableViewController" customModule="SwiftTyping" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="MZz-ge-jGf">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="MZz-ge-jGf">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.99999994039999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="scoreCell" id="cvi-N0-EeN" customClass="HiScoreTableViewCell" customModule="SwiftTyping" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50" width="393" height="40.666667938232422"/>
+                                <rect key="frame" x="20" y="55.333332061767578" width="353" height="41"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cvi-N0-EeN" id="4OM-Do-5vo">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="40.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="353" height="41"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rank" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AcT-WX-Lv9">
-                                            <rect key="frame" x="30.000000000000004" y="10.000000000000002" width="49.333333333333343" height="20.666666666666671"/>
+                                            <rect key="frame" x="30.000000000000004" y="10" width="49.333333333333343" height="21"/>
                                             <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="17"/>
                                             <color key="textColor" red="0.94482925259999995" green="0.62458657309999999" blue="0.32848215069999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDp-TP-hPQ">
-                                            <rect key="frame" x="130" y="10.000000000000002" width="54" height="20.666666666666671"/>
+                                            <rect key="frame" x="130" y="10" width="54" height="21"/>
                                             <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jID-24-Rqj">
-                                            <rect key="frame" x="247" y="10.000000000000002" width="46" height="20.666666666666671"/>
+                                            <rect key="frame" x="207" y="10" width="46" height="21"/>
                                             <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="17"/>
                                             <color key="textColor" red="0.63726091380000005" green="0.40094196799999998" blue="0.25445276500000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -266,7 +277,7 @@
                     </view>
                     <connections>
                         <outlet property="nameEdit" destination="9bu-u2-rs8" id="a3s-rG-cVS"/>
-                        <segue destination="Vdr-rR-YdC" kind="presentation" identifier="startGameSegue" id="BIh-5R-fHV"/>
+                        <segue destination="Vdr-rR-YdC" kind="presentation" identifier="startGameSegue" modalPresentationStyle="automatic" id="BIh-5R-fHV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -282,19 +293,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Over" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t7d-CS-18a">
-                                <rect key="frame" x="0.0" y="159" width="393" height="62.333333333333343"/>
+                                <rect key="frame" x="0.0" y="159" width="393" height="60.666666666666657"/>
                                 <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="52"/>
                                 <color key="textColor" systemColor="systemPinkColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your score:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmJ-Qb-MSn">
-                                <rect key="frame" x="0.0" y="271.33333333333331" width="393" height="32.333333333333314"/>
+                                <rect key="frame" x="0.0" y="269.66666666666669" width="393" height="32.333333333333314"/>
                                 <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="27"/>
                                 <color key="textColor" red="0.14758911729999999" green="0.18844762440000001" blue="0.1885907054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8q-ZM-ElE">
-                                <rect key="frame" x="0.0" y="333.66666666666669" width="393" height="64.666666666666686"/>
+                                <rect key="frame" x="0.0" y="332" width="393" height="63"/>
                                 <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="54"/>
                                 <color key="textColor" red="0.94482925259999995" green="0.62458657309999999" blue="0.32848215069999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -349,14 +360,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MLc-ei-TK5">
-                                <rect key="frame" x="100" y="139" width="193" height="20"/>
+                                <rect key="frame" x="169.66666666666666" y="139" width="54" height="20"/>
                                 <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="17"/>
                                 <color key="textColor" red="0.14758911729999999" green="0.18844762440000001" blue="0.1885907054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ready?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaJ-XK-vbd">
-                                <rect key="frame" x="0.0" y="209" width="393" height="33.666666666666657"/>
-                                <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="28"/>
+                                <rect key="frame" x="0.0" y="326" width="393" height="35.333333333333314"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="22"/>
                                 <color key="textColor" systemColor="systemOrangeColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -382,16 +393,17 @@
                                 <buttonConfiguration key="configuration" style="gray" title="Diff down"/>
                                 <connections>
                                     <action selector="diffDownPressed:" destination="Vdr-rR-YdC" eventType="touchUpInside" id="wD1-bV-6hQ"/>
+                                    <action selector="randomButtonPressed:" destination="Vdr-rR-YdC" eventType="touchUpInside" id="m07-J3-Q4Y"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Difficulty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QaW-ZD-2SB">
-                                <rect key="frame" x="100" y="317.66666666666669" width="193" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QaW-ZD-2SB">
+                                <rect key="frame" x="29.999999999999996" y="139" width="55.666666666666657" height="20"/>
                                 <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="17"/>
                                 <color key="textColor" red="0.63726091380000005" green="0.40094196799999998" blue="0.25445276500000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Touch to start" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="95c-n6-rgm">
-                                <rect key="frame" x="0.0" y="432.66666666666669" width="393" height="44.666666666666686"/>
+                                <rect key="frame" x="0.0" y="431.33333333333331" width="393" height="44.666666666666686"/>
                                 <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -399,69 +411,73 @@
                                     <action selector="textFieldSelected:" destination="Vdr-rR-YdC" eventType="touchDown" id="rpI-TG-bEf"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OcL-P1-XZq">
-                                <rect key="frame" x="100" y="357.66666666666669" width="193" height="20"/>
-                                <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="17"/>
-                                <color key="textColor" red="0.14758911729999999" green="0.18844762440000001" blue="0.1885907054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SGz-5E-sbW">
-                                <rect key="frame" x="40" y="79" width="20" height="39"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <color key="textColor" red="0.14758911729999999" green="0.18844762440000001" blue="0.1885907054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nS-9n-h6N">
-                                <rect key="frame" x="100" y="382.66666666666669" width="193" height="20"/>
-                                <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="17"/>
-                                <color key="textColor" red="0.14758911729999999" green="0.18844762440000001" blue="0.1885907054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MoT-TY-JVx">
-                                <rect key="frame" x="0.0" y="257.66666666666669" width="393" height="30"/>
+                                <rect key="frame" x="80" y="89" width="233" height="30"/>
                                 <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="25"/>
                                 <color key="textColor" red="0.14758911729999999" green="0.18844762440000001" blue="0.1885907054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Difficulty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVv-Kl-VqH">
+                                <rect key="frame" x="250" y="139" width="113" height="20"/>
+                                <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="17"/>
+                                <color key="textColor" red="0.63726091380000005" green="0.40094196799999998" blue="0.25445276500000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OcL-P1-XZq">
+                                <rect key="frame" x="100" y="184" width="193" height="20"/>
+                                <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="17"/>
+                                <color key="textColor" red="0.14758911729999999" green="0.18844762440000001" blue="0.1885907054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nS-9n-h6N">
+                                <rect key="frame" x="100" y="209" width="193" height="37"/>
+                                <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="31"/>
+                                <color key="textColor" red="0.14758911729999999" green="0.18844762440000001" blue="0.1885907054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="chevron.backward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="MLJ-YL-bff">
+                                <rect key="frame" x="16" y="59" width="37" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DOq-Tg-HZb"/>
                         <color key="backgroundColor" red="0.97254902119999997" green="0.97254902119999997" blue="0.97254902119999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.63726091380000005" green="0.40094196799999998" blue="0.25445276500000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="DOq-Tg-HZb" firstAttribute="trailing" secondItem="lOj-Fc-dSV" secondAttribute="trailing" constant="100" id="1gx-9p-8qU"/>
-                            <constraint firstItem="MLc-ei-TK5" firstAttribute="leading" secondItem="DOq-Tg-HZb" secondAttribute="leading" constant="100" id="4b9-fu-d68"/>
-                            <constraint firstItem="QaW-ZD-2SB" firstAttribute="top" secondItem="MoT-TY-JVx" secondAttribute="bottom" constant="30" id="6wR-ne-3PA"/>
+                            <constraint firstItem="QaW-ZD-2SB" firstAttribute="top" secondItem="DOq-Tg-HZb" secondAttribute="top" constant="80" id="2bx-gN-x9c"/>
+                            <constraint firstItem="95c-n6-rgm" firstAttribute="top" secondItem="oaJ-XK-vbd" secondAttribute="bottom" constant="70" id="6nO-i7-daI"/>
                             <constraint firstItem="DOq-Tg-HZb" firstAttribute="trailing" secondItem="95c-n6-rgm" secondAttribute="trailing" id="8BS-fD-B7s"/>
                             <constraint firstItem="Zrt-Ae-bTe" firstAttribute="leading" secondItem="DOq-Tg-HZb" secondAttribute="leading" constant="80" id="8OW-p2-Fa2"/>
+                            <constraint firstItem="oaJ-XK-vbd" firstAttribute="top" secondItem="1nS-9n-h6N" secondAttribute="bottom" constant="80" id="8yd-Gq-AHM"/>
                             <constraint firstItem="DOq-Tg-HZb" firstAttribute="trailing" secondItem="OcL-P1-XZq" secondAttribute="trailing" constant="100" id="Alc-zY-qfe"/>
                             <constraint firstItem="1nS-9n-h6N" firstAttribute="top" secondItem="OcL-P1-XZq" secondAttribute="bottom" constant="5" id="EnP-wt-h2u"/>
                             <constraint firstItem="lOj-Fc-dSV" firstAttribute="top" secondItem="8df-cx-rCM" secondAttribute="bottom" constant="100" id="Fu2-Hp-Q2e"/>
                             <constraint firstItem="DOq-Tg-HZb" firstAttribute="trailing" secondItem="1nS-9n-h6N" secondAttribute="trailing" constant="100" id="I9L-Ie-KKl"/>
+                            <constraint firstItem="MLc-ei-TK5" firstAttribute="centerX" secondItem="fvL-so-Maq" secondAttribute="centerX" id="ImE-Md-kS2"/>
                             <constraint firstItem="lOj-Fc-dSV" firstAttribute="top" secondItem="Zrt-Ae-bTe" secondAttribute="bottom" constant="100" id="JU5-3t-Vdo"/>
-                            <constraint firstItem="OcL-P1-XZq" firstAttribute="top" secondItem="QaW-ZD-2SB" secondAttribute="bottom" constant="20" id="MM3-GD-koV"/>
-                            <constraint firstItem="QaW-ZD-2SB" firstAttribute="leading" secondItem="DOq-Tg-HZb" secondAttribute="leading" constant="100" id="NaZ-op-MNV"/>
-                            <constraint firstItem="MoT-TY-JVx" firstAttribute="leading" secondItem="DOq-Tg-HZb" secondAttribute="leading" id="NpK-NL-Pfv"/>
-                            <constraint firstItem="DOq-Tg-HZb" firstAttribute="trailing" secondItem="QaW-ZD-2SB" secondAttribute="trailing" constant="100" id="TNJ-l9-dwC"/>
+                            <constraint firstItem="MoT-TY-JVx" firstAttribute="leading" secondItem="DOq-Tg-HZb" secondAttribute="leading" constant="80" id="NpK-NL-Pfv"/>
+                            <constraint firstItem="OcL-P1-XZq" firstAttribute="top" secondItem="oVv-Kl-VqH" secondAttribute="bottom" constant="25" id="Ske-eD-nWZ"/>
+                            <constraint firstItem="MoT-TY-JVx" firstAttribute="top" secondItem="DOq-Tg-HZb" secondAttribute="top" constant="30" id="Ukf-3Z-1ql"/>
                             <constraint firstItem="oaJ-XK-vbd" firstAttribute="leading" secondItem="DOq-Tg-HZb" secondAttribute="leading" id="V2W-KM-mfc"/>
                             <constraint firstItem="DOq-Tg-HZb" firstAttribute="trailing" secondItem="8df-cx-rCM" secondAttribute="trailing" constant="80" id="aAQ-dH-BfB"/>
+                            <constraint firstItem="oVv-Kl-VqH" firstAttribute="top" secondItem="DOq-Tg-HZb" secondAttribute="top" constant="80" id="bJZ-3V-zaf"/>
                             <constraint firstItem="95c-n6-rgm" firstAttribute="leading" secondItem="DOq-Tg-HZb" secondAttribute="leading" id="dLj-Lo-WnO"/>
                             <constraint firstItem="DOq-Tg-HZb" firstAttribute="trailing" secondItem="oaJ-XK-vbd" secondAttribute="trailing" id="g2R-SI-KRt"/>
-                            <constraint firstItem="SGz-5E-sbW" firstAttribute="leading" secondItem="DOq-Tg-HZb" secondAttribute="leading" constant="40" id="iIl-VO-qy2"/>
-                            <constraint firstItem="SGz-5E-sbW" firstAttribute="top" secondItem="DOq-Tg-HZb" secondAttribute="top" constant="20" id="kbj-lU-Rhh"/>
                             <constraint firstItem="MLc-ei-TK5" firstAttribute="top" secondItem="DOq-Tg-HZb" secondAttribute="top" constant="80" id="mmj-fW-bLe"/>
                             <constraint firstItem="lOj-Fc-dSV" firstAttribute="leading" secondItem="DOq-Tg-HZb" secondAttribute="leading" constant="100" id="qyW-qP-Jdv"/>
-                            <constraint firstItem="95c-n6-rgm" firstAttribute="top" secondItem="1nS-9n-h6N" secondAttribute="bottom" constant="30" id="r6s-jl-Hdc"/>
                             <constraint firstItem="1nS-9n-h6N" firstAttribute="leading" secondItem="DOq-Tg-HZb" secondAttribute="leading" constant="100" id="rMe-nL-WvW"/>
-                            <constraint firstItem="MoT-TY-JVx" firstAttribute="top" secondItem="oaJ-XK-vbd" secondAttribute="bottom" constant="15" id="rci-NV-wHD"/>
                             <constraint firstItem="DOq-Tg-HZb" firstAttribute="bottom" secondItem="lOj-Fc-dSV" secondAttribute="bottom" constant="50" id="slR-ib-sSG"/>
-                            <constraint firstItem="oaJ-XK-vbd" firstAttribute="top" secondItem="MLc-ei-TK5" secondAttribute="bottom" constant="50" id="t8X-d9-POz"/>
                             <constraint firstItem="OcL-P1-XZq" firstAttribute="leading" secondItem="DOq-Tg-HZb" secondAttribute="leading" constant="100" id="tqf-EE-I4K"/>
-                            <constraint firstItem="DOq-Tg-HZb" firstAttribute="trailing" secondItem="MoT-TY-JVx" secondAttribute="trailing" id="vaB-Lg-xhf"/>
-                            <constraint firstItem="DOq-Tg-HZb" firstAttribute="trailing" secondItem="MLc-ei-TK5" secondAttribute="trailing" constant="100" id="vgP-Sv-bqp"/>
+                            <constraint firstItem="DOq-Tg-HZb" firstAttribute="trailing" secondItem="MoT-TY-JVx" secondAttribute="trailing" constant="80" id="vaB-Lg-xhf"/>
+                            <constraint firstItem="DOq-Tg-HZb" firstAttribute="trailing" secondItem="oVv-Kl-VqH" secondAttribute="trailing" constant="30" id="xgR-bV-gsR"/>
+                            <constraint firstItem="QaW-ZD-2SB" firstAttribute="leading" secondItem="DOq-Tg-HZb" secondAttribute="leading" constant="30" id="yfR-ev-Xfa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="d8z-21-XO3"/>
                     <connections>
+                        <outlet property="difficultyLabel" destination="oVv-Kl-VqH" id="Ddm-xf-6hQ"/>
                         <outlet property="editTextField" destination="95c-n6-rgm" id="QEc-QT-lC3"/>
                         <outlet property="levelLabel" destination="QaW-ZD-2SB" id="Ven-7t-VHS"/>
                         <outlet property="nameLabel" destination="MoT-TY-JVx" id="UcT-5Y-wcI"/>
@@ -469,15 +485,21 @@
                         <outlet property="scoreLabel" destination="MLc-ei-TK5" id="sxz-tE-wiE"/>
                         <outlet property="timerLabel" destination="1nS-9n-h6N" id="iIA-0j-hkF"/>
                         <segue destination="MQa-Qy-lbi" kind="show" identifier="GameOverSegue" id="NZb-Pd-nBT"/>
+                        <segue destination="2yT-4N-fMx" kind="unwind" identifier="unwindToStart" unwindAction="unwindToStartWithSegue:" id="dn9-CH-EYP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bKT-YG-KJh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="2yT-4N-fMx" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1053" y="-318"/>
+            <point key="canvasLocation" x="1052.6717557251909" y="-318.3098591549296"/>
         </scene>
     </scenes>
     <resources>
+        <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <image name="dw21batch2-mynt-01.jpg" width="1200" height="1200"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
