@@ -24,20 +24,20 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let name: String = defaults.object(forKey: "PlayerName") as? String {
-            print(name)
-            nameLabel.text = name
-        }
-        
-        
         game = Game(scoreFunction: updateScoreLabel, randomWordFunction: updateWordLabel, levelFunction: updateLevelLabel, clockTickFunction: updateTimerLabel, timesUpFunction: timesUp)
         
-        levelLabel.text = "Level: \(String(((game?.gameWords.getLevel() ?? 0) - 2) ))"
-        scoreLabel.text = String(game?.score ?? 0)
-        difficultyLabel.text = setLevelLabel()
+        if let name: String = defaults.object(forKey: "PlayerName") as? String {
+            nameLabel.text = "Player: \(name)"
+        }
+        
+        updateLevelLabel(level: (game?.gameWords.getLevel() ?? 0))
+        updateScoreLabel(score: 0)
+        difficultyLabel.text = setDifficultyLabel()
+        editTextField.spellCheckingType = .no
+        editTextField.autocorrectionType = .no
     }
     
-    func setLevelLabel() -> String {
+    func setDifficultyLabel() -> String {
         switch game?.getDifficulty() {
         case 1: return "Easy"
         case 2: return "Normal"
@@ -48,7 +48,7 @@ class GameViewController: UIViewController {
     }
     
     func updateScoreLabel(score: Int) {
-        scoreLabel.text = String(score)
+        scoreLabel.text = "Score: \(String(score))"
     }
     
     func updateWordLabel(word: String) {

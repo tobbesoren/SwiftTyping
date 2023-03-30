@@ -8,6 +8,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Chalk Board.ttf">
+            <string>ChalkBoard</string>
+        </array>
         <array key="MomType.ttf">
             <string>MomsTypewriter</string>
         </array>
@@ -18,7 +21,7 @@
             <objects>
                 <viewController id="UFs-hv-v2F" customClass="SettingsViewController" customModule="SwiftTyping" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="av6-g2-Dcc">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5FP-jL-udJ">
@@ -131,26 +134,26 @@
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="scoreCell" id="cvi-N0-EeN" customClass="HiScoreTableViewCell" customModule="SwiftTyping" customModuleProvider="target">
-                                <rect key="frame" x="20" y="55.333332061767578" width="353" height="41.666667938232422"/>
+                                <rect key="frame" x="20" y="55.333332061767578" width="353" height="40.333332061767578"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cvi-N0-EeN" id="4OM-Do-5vo">
-                                    <rect key="frame" x="0.0" y="0.0" width="353" height="41.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="353" height="40.333332061767578"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rank" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AcT-WX-Lv9">
-                                            <rect key="frame" x="30.000000000000004" y="10.000000000000002" width="49.333333333333343" height="21.666666666666671"/>
+                                            <rect key="frame" x="30.000000000000004" y="9.9999999999999982" width="39.333333333333343" height="20.333333333333329"/>
                                             <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="17"/>
                                             <color key="textColor" red="0.94482925259999995" green="0.62458657309999999" blue="0.32848215069999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDp-TP-hPQ">
-                                            <rect key="frame" x="130" y="10.000000000000002" width="54" height="21.666666666666671"/>
+                                            <rect key="frame" x="130" y="9.9999999999999982" width="44.666666666666657" height="20.333333333333329"/>
                                             <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jID-24-Rqj">
-                                            <rect key="frame" x="207" y="10.000000000000002" width="46" height="21.666666666666671"/>
+                                            <rect key="frame" x="207" y="9.9999999999999982" width="46" height="20.333333333333329"/>
                                             <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="17"/>
                                             <color key="textColor" red="0.63726091380000005" green="0.40094196799999998" blue="0.25445276500000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -196,46 +199,46 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MtD-dn-L0R">
-                                <rect key="frame" x="131.66666666666666" y="682.66666666666663" width="129.99999999999997" height="32.666666666666629"/>
+                                <rect key="frame" x="131.66666666666666" y="692" width="129.99999999999997" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="64b-BZ-21f"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Start game">
-                                    <fontDescription key="titleFontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
+                                    <fontDescription key="titleFontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="12"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="startButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qpz-SV-dUy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MXh-b5-uLa">
-                                <rect key="frame" x="131.66666666666666" y="735.33333333333337" width="129.99999999999997" height="32.666666666666629"/>
+                                <rect key="frame" x="131.66666666666666" y="740" width="129.99999999999997" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="Iqe-VS-4VT"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="See hi-scores">
-                                    <fontDescription key="titleFontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
+                                    <fontDescription key="titleFontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="12"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="raC-0Z-umb" kind="show" id="PCf-1g-jW4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="74f-yN-4Lq">
-                                <rect key="frame" x="131.66666666666666" y="630.66666666666663" width="129.99999999999997" height="32"/>
+                                <rect key="frame" x="131.66666666666666" y="644" width="129.99999999999997" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="k5y-hF-PVG"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Edit settings">
-                                    <fontDescription key="titleFontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
+                                    <fontDescription key="titleFontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="12"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="UFs-hv-v2F" kind="show" id="Eue-wv-1JO"/>
+                                    <segue destination="UFs-hv-v2F" kind="presentation" modalPresentationStyle="fullScreen" id="Eue-wv-1JO"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name:" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9bu-u2-rs8">
-                                <rect key="frame" x="0.0" y="555" width="393" height="45.666666666666629"/>
+                                <rect key="frame" x="0.0" y="543.33333333333337" width="393" height="45.666666666666629"/>
                                 <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -251,6 +254,18 @@
                                 <color key="textColor" red="0.12222132731958768" green="0.068718475625195424" blue="0.051411469984589779" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diff" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBG-i7-td3">
+                                <rect key="frame" x="50" y="609" width="46" height="21"/>
+                                <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="17"/>
+                                <color key="textColor" red="0.14758911729999999" green="0.18844762440000001" blue="0.1885907054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start level" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJh-X5-N7u">
+                                <rect key="frame" x="223" y="609" width="120" height="21"/>
+                                <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="17"/>
+                                <color key="textColor" red="0.14758911729999999" green="0.18844762440000001" blue="0.1885907054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.97254902119999997" green="0.97254902119999997" blue="0.97254902119999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -258,6 +273,8 @@
                         <constraints>
                             <constraint firstItem="oVA-UY-JqU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="130" id="0ie-CU-Ic6"/>
                             <constraint firstItem="E6R-cR-Ybb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="7Pz-xT-YFQ"/>
+                            <constraint firstAttribute="trailing" secondItem="CJh-X5-N7u" secondAttribute="trailing" constant="50" id="8oa-pG-pky"/>
+                            <constraint firstItem="CJh-X5-N7u" firstAttribute="top" secondItem="9bu-u2-rs8" secondAttribute="bottom" constant="20" id="CKp-r9-DQ8"/>
                             <constraint firstItem="MXh-b5-uLa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E0R-ZJ-e2h"/>
                             <constraint firstItem="MtD-dn-L0R" firstAttribute="top" secondItem="74f-yN-4Lq" secondAttribute="bottom" constant="20" id="Ft6-ZF-3BB"/>
                             <constraint firstItem="MXh-b5-uLa" firstAttribute="top" secondItem="MtD-dn-L0R" secondAttribute="bottom" constant="20" id="HW2-Xy-thR"/>
@@ -265,17 +282,21 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="E6R-cR-Ybb" secondAttribute="trailing" constant="20" id="Wuq-h7-9LN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9bu-u2-rs8" secondAttribute="trailing" id="XXB-Tg-mbj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oVA-UY-JqU" secondAttribute="trailing" constant="130" id="auE-eF-5y2"/>
-                            <constraint firstItem="74f-yN-4Lq" firstAttribute="top" secondItem="9bu-u2-rs8" secondAttribute="bottom" constant="30" id="bZF-g3-Y9W"/>
+                            <constraint firstItem="74f-yN-4Lq" firstAttribute="top" secondItem="9bu-u2-rs8" secondAttribute="bottom" constant="55" id="bZF-g3-Y9W"/>
                             <constraint firstItem="74f-yN-4Lq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cMp-Ia-mU0"/>
                             <constraint firstItem="9bu-u2-rs8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="czs-ZE-FuK"/>
                             <constraint firstItem="oVA-UY-JqU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="130" id="p3Y-m1-oQ5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MXh-b5-uLa" secondAttribute="bottom" constant="50" id="qyJ-ry-9uG"/>
+                            <constraint firstItem="gBG-i7-td3" firstAttribute="top" secondItem="9bu-u2-rs8" secondAttribute="bottom" constant="20" id="tYq-PY-CFg"/>
                             <constraint firstItem="MtD-dn-L0R" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uB7-hZ-plS"/>
+                            <constraint firstItem="gBG-i7-td3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="x8k-zh-lpm"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="difficultyLabel" destination="gBG-i7-td3" id="t7W-xq-BvS"/>
                         <outlet property="nameEdit" destination="9bu-u2-rs8" id="a3s-rG-cVS"/>
-                        <segue destination="Vdr-rR-YdC" kind="presentation" identifier="startGameSegue" modalPresentationStyle="automatic" id="BIh-5R-fHV"/>
+                        <outlet property="startLevelLabel" destination="CJh-X5-N7u" id="cGp-2y-aFn"/>
+                        <segue destination="Vdr-rR-YdC" kind="presentation" identifier="startGameSegue" modalPresentationStyle="fullScreen" id="BIh-5R-fHV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -291,19 +312,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Over" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t7d-CS-18a">
-                                <rect key="frame" x="0.0" y="159" width="393" height="60.666666666666657"/>
+                                <rect key="frame" x="0.0" y="159" width="393" height="62.333333333333343"/>
                                 <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="52"/>
                                 <color key="textColor" systemColor="systemPinkColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your score:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmJ-Qb-MSn">
-                                <rect key="frame" x="0.0" y="269.66666666666669" width="393" height="32.333333333333314"/>
+                                <rect key="frame" x="0.0" y="271.33333333333331" width="393" height="32.333333333333314"/>
                                 <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="27"/>
                                 <color key="textColor" red="0.14758911729999999" green="0.18844762440000001" blue="0.1885907054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8q-ZM-ElE">
-                                <rect key="frame" x="0.0" y="332" width="393" height="63"/>
+                                <rect key="frame" x="0.0" y="333.66666666666669" width="393" height="64.666666666666686"/>
                                 <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="54"/>
                                 <color key="textColor" red="0.94482925259999995" green="0.62458657309999999" blue="0.32848215069999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -354,23 +375,29 @@
             <objects>
                 <viewController title="Game" id="Vdr-rR-YdC" customClass="GameViewController" customModule="SwiftTyping" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fvL-so-Maq">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MLc-ei-TK5">
-                                <rect key="frame" x="174.33333333333334" y="139" width="44.666666666666657" height="20"/>
-                                <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="17"/>
-                                <color key="textColor" red="0.14758911729999999" green="0.18844762440000001" blue="0.1885907054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="school-blackboard.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="QkR-YP-83r">
+                                <rect key="frame" x="0.0" y="119" width="393" height="281"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="QkR-YP-83r" secondAttribute="height" multiplier="393:281" id="JdM-wA-lKw"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MLc-ei-TK5">
+                                <rect key="frame" x="179" y="214.33333333333334" width="35.333333333333343" height="29.666666666666657"/>
+                                <fontDescription key="fontDescription" name="ChalkBoard" family="Chalk Board" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ready?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaJ-XK-vbd">
-                                <rect key="frame" x="0.0" y="326" width="393" height="35.333333333333314"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="22"/>
+                                <rect key="frame" x="0.0" y="315" width="393" height="45.333333333333314"/>
+                                <fontDescription key="fontDescription" name="ChalkBoard" family="Chalk Board" pointSize="32"/>
                                 <color key="textColor" systemColor="systemOrangeColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lOj-Fc-dSV">
-                                <rect key="frame" x="100" y="698" width="193" height="35"/>
+                                <rect key="frame" x="100" y="733" width="193" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="New random word"/>
                                 <connections>
@@ -378,7 +405,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8df-cx-rCM">
-                                <rect key="frame" x="238" y="563" width="75" height="35"/>
+                                <rect key="frame" x="238" y="598" width="75" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Diff up"/>
                                 <connections>
@@ -386,7 +413,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zrt-Ae-bTe">
-                                <rect key="frame" x="80" y="563" width="97" height="35"/>
+                                <rect key="frame" x="80" y="598" width="97" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Diff down"/>
                                 <connections>
@@ -395,13 +422,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QaW-ZD-2SB">
-                                <rect key="frame" x="30" y="139" width="40" height="20"/>
-                                <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="17"/>
-                                <color key="textColor" red="0.63726091380000005" green="0.40094196799999998" blue="0.25445276500000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="80" y="214.33333333333334" width="31" height="29.666666666666657"/>
+                                <fontDescription key="fontDescription" name="ChalkBoard" family="Chalk Board" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Touch to start" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="95c-n6-rgm">
-                                <rect key="frame" x="0.0" y="431.33333333333331" width="393" height="44.666666666666686"/>
+                                <rect key="frame" x="0.0" y="472.33333333333331" width="393" height="45.666666666666686"/>
                                 <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -409,28 +436,28 @@
                                     <action selector="textFieldSelected:" destination="Vdr-rR-YdC" eventType="touchDown" id="rpI-TG-bEf"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MoT-TY-JVx">
-                                <rect key="frame" x="80" y="89" width="233" height="30"/>
-                                <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="25"/>
-                                <color key="textColor" red="0.14758911729999999" green="0.18844762440000001" blue="0.1885907054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MoT-TY-JVx">
+                                <rect key="frame" x="80" y="169" width="233" height="35.333333333333343"/>
+                                <fontDescription key="fontDescription" name="ChalkBoard" family="Chalk Board" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Difficulty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVv-Kl-VqH">
-                                <rect key="frame" x="297.33333333333331" y="139" width="65.666666666666686" height="20"/>
-                                <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="17"/>
-                                <color key="textColor" red="0.63726091380000005" green="0.40094196799999998" blue="0.25445276500000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="264.66666666666669" y="214.33333333333334" width="48.333333333333314" height="29.666666666666657"/>
+                                <fontDescription key="fontDescription" name="ChalkBoard" family="Chalk Board" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OcL-P1-XZq">
-                                <rect key="frame" x="100" y="184" width="193" height="20"/>
-                                <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="17"/>
-                                <color key="textColor" red="0.14758911729999999" green="0.18844762440000001" blue="0.1885907054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="100" y="249" width="193" height="24"/>
+                                <fontDescription key="fontDescription" name="ChalkBoard" family="Chalk Board" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nS-9n-h6N">
-                                <rect key="frame" x="100" y="209" width="193" height="37"/>
+                                <rect key="frame" x="100" y="273" width="193" height="37"/>
                                 <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="31"/>
-                                <color key="textColor" red="0.14758911729999999" green="0.18844762440000001" blue="0.1885907054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJ3-Tn-8d6">
@@ -447,35 +474,42 @@
                         <color key="tintColor" red="0.63726091380000005" green="0.40094196799999998" blue="0.25445276500000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="DOq-Tg-HZb" firstAttribute="trailing" secondItem="lOj-Fc-dSV" secondAttribute="trailing" constant="100" id="1gx-9p-8qU"/>
-                            <constraint firstItem="QaW-ZD-2SB" firstAttribute="top" secondItem="DOq-Tg-HZb" secondAttribute="top" constant="80" id="2bx-gN-x9c"/>
-                            <constraint firstItem="95c-n6-rgm" firstAttribute="top" secondItem="oaJ-XK-vbd" secondAttribute="bottom" constant="70" id="6nO-i7-daI"/>
+                            <constraint firstItem="QkR-YP-83r" firstAttribute="trailing" secondItem="DOq-Tg-HZb" secondAttribute="trailing" id="1we-7J-HwV"/>
+                            <constraint firstItem="QaW-ZD-2SB" firstAttribute="top" secondItem="MoT-TY-JVx" secondAttribute="bottom" constant="10" id="2bx-gN-x9c"/>
+                            <constraint firstItem="OcL-P1-XZq" firstAttribute="top" secondItem="MLc-ei-TK5" secondAttribute="bottom" constant="5" id="7JV-Xk-e3x"/>
                             <constraint firstItem="DOq-Tg-HZb" firstAttribute="trailing" secondItem="95c-n6-rgm" secondAttribute="trailing" id="8BS-fD-B7s"/>
                             <constraint firstItem="Zrt-Ae-bTe" firstAttribute="leading" secondItem="DOq-Tg-HZb" secondAttribute="leading" constant="80" id="8OW-p2-Fa2"/>
-                            <constraint firstItem="oaJ-XK-vbd" firstAttribute="top" secondItem="1nS-9n-h6N" secondAttribute="bottom" constant="80" id="8yd-Gq-AHM"/>
+                            <constraint firstItem="oaJ-XK-vbd" firstAttribute="top" secondItem="1nS-9n-h6N" secondAttribute="bottom" constant="5" id="8yd-Gq-AHM"/>
                             <constraint firstItem="DOq-Tg-HZb" firstAttribute="trailing" secondItem="OcL-P1-XZq" secondAttribute="trailing" constant="100" id="Alc-zY-qfe"/>
-                            <constraint firstItem="1nS-9n-h6N" firstAttribute="top" secondItem="OcL-P1-XZq" secondAttribute="bottom" constant="5" id="EnP-wt-h2u"/>
+                            <constraint firstItem="1nS-9n-h6N" firstAttribute="top" secondItem="OcL-P1-XZq" secondAttribute="bottom" id="EnP-wt-h2u"/>
+                            <constraint firstItem="QkR-YP-83r" firstAttribute="leading" secondItem="DOq-Tg-HZb" secondAttribute="leading" id="FpH-vf-ja4"/>
                             <constraint firstItem="lOj-Fc-dSV" firstAttribute="top" secondItem="8df-cx-rCM" secondAttribute="bottom" constant="100" id="Fu2-Hp-Q2e"/>
                             <constraint firstItem="DOq-Tg-HZb" firstAttribute="trailing" secondItem="1nS-9n-h6N" secondAttribute="trailing" constant="100" id="I9L-Ie-KKl"/>
                             <constraint firstItem="MLc-ei-TK5" firstAttribute="centerX" secondItem="fvL-so-Maq" secondAttribute="centerX" id="ImE-Md-kS2"/>
                             <constraint firstItem="lOj-Fc-dSV" firstAttribute="top" secondItem="Zrt-Ae-bTe" secondAttribute="bottom" constant="100" id="JU5-3t-Vdo"/>
                             <constraint firstItem="MoT-TY-JVx" firstAttribute="leading" secondItem="DOq-Tg-HZb" secondAttribute="leading" constant="80" id="NpK-NL-Pfv"/>
+                            <constraint firstItem="DOq-Tg-HZb" firstAttribute="bottom" secondItem="95c-n6-rgm" secondAttribute="bottom" constant="300" id="RpE-nj-5yv"/>
                             <constraint firstItem="CJ3-Tn-8d6" firstAttribute="top" secondItem="fvL-so-Maq" secondAttribute="topMargin" constant="30" id="SAs-8q-FdO"/>
-                            <constraint firstItem="OcL-P1-XZq" firstAttribute="top" secondItem="oVv-Kl-VqH" secondAttribute="bottom" constant="25" id="Ske-eD-nWZ"/>
-                            <constraint firstItem="MoT-TY-JVx" firstAttribute="top" secondItem="DOq-Tg-HZb" secondAttribute="top" constant="30" id="Ukf-3Z-1ql"/>
+                            <constraint firstItem="MoT-TY-JVx" firstAttribute="top" secondItem="DOq-Tg-HZb" secondAttribute="top" constant="110" id="Ukf-3Z-1ql"/>
                             <constraint firstItem="oaJ-XK-vbd" firstAttribute="leading" secondItem="DOq-Tg-HZb" secondAttribute="leading" id="V2W-KM-mfc"/>
+                            <constraint firstItem="95c-n6-rgm" firstAttribute="trailing" secondItem="DOq-Tg-HZb" secondAttribute="trailing" id="W5i-Kw-CjO"/>
+                            <constraint firstItem="95c-n6-rgm" firstAttribute="leading" secondItem="DOq-Tg-HZb" secondAttribute="leading" id="Ze1-mn-pdr"/>
                             <constraint firstItem="DOq-Tg-HZb" firstAttribute="trailing" secondItem="8df-cx-rCM" secondAttribute="trailing" constant="80" id="aAQ-dH-BfB"/>
-                            <constraint firstItem="oVv-Kl-VqH" firstAttribute="top" secondItem="DOq-Tg-HZb" secondAttribute="top" constant="80" id="bJZ-3V-zaf"/>
+                            <constraint firstItem="oVv-Kl-VqH" firstAttribute="top" secondItem="MoT-TY-JVx" secondAttribute="bottom" constant="10" id="bJZ-3V-zaf"/>
                             <constraint firstItem="95c-n6-rgm" firstAttribute="leading" secondItem="DOq-Tg-HZb" secondAttribute="leading" id="dLj-Lo-WnO"/>
+                            <constraint firstItem="oaJ-XK-vbd" firstAttribute="centerX" secondItem="fvL-so-Maq" secondAttribute="centerX" id="f0q-T5-JGF"/>
                             <constraint firstItem="DOq-Tg-HZb" firstAttribute="trailing" secondItem="oaJ-XK-vbd" secondAttribute="trailing" id="g2R-SI-KRt"/>
-                            <constraint firstItem="MLc-ei-TK5" firstAttribute="top" secondItem="DOq-Tg-HZb" secondAttribute="top" constant="80" id="mmj-fW-bLe"/>
+                            <constraint firstItem="QkR-YP-83r" firstAttribute="top" secondItem="DOq-Tg-HZb" secondAttribute="top" constant="60" id="k1o-iG-D9Z"/>
+                            <constraint firstItem="MLc-ei-TK5" firstAttribute="top" secondItem="MoT-TY-JVx" secondAttribute="bottom" constant="10" id="mmj-fW-bLe"/>
+                            <constraint firstItem="oaJ-XK-vbd" firstAttribute="centerX" secondItem="fvL-so-Maq" secondAttribute="centerX" id="oqc-PH-dFF"/>
                             <constraint firstItem="CJ3-Tn-8d6" firstAttribute="leading" secondItem="DOq-Tg-HZb" secondAttribute="leading" constant="20" id="qpG-uR-F9Z"/>
                             <constraint firstItem="lOj-Fc-dSV" firstAttribute="leading" secondItem="DOq-Tg-HZb" secondAttribute="leading" constant="100" id="qyW-qP-Jdv"/>
                             <constraint firstItem="1nS-9n-h6N" firstAttribute="leading" secondItem="DOq-Tg-HZb" secondAttribute="leading" constant="100" id="rMe-nL-WvW"/>
                             <constraint firstItem="DOq-Tg-HZb" firstAttribute="bottom" secondItem="lOj-Fc-dSV" secondAttribute="bottom" constant="50" id="slR-ib-sSG"/>
                             <constraint firstItem="OcL-P1-XZq" firstAttribute="leading" secondItem="DOq-Tg-HZb" secondAttribute="leading" constant="100" id="tqf-EE-I4K"/>
                             <constraint firstItem="DOq-Tg-HZb" firstAttribute="trailing" secondItem="MoT-TY-JVx" secondAttribute="trailing" constant="80" id="vaB-Lg-xhf"/>
-                            <constraint firstItem="DOq-Tg-HZb" firstAttribute="trailing" secondItem="oVv-Kl-VqH" secondAttribute="trailing" constant="30" id="xgR-bV-gsR"/>
-                            <constraint firstItem="QaW-ZD-2SB" firstAttribute="leading" secondItem="DOq-Tg-HZb" secondAttribute="leading" constant="30" id="yfR-ev-Xfa"/>
+                            <constraint firstItem="DOq-Tg-HZb" firstAttribute="trailing" secondItem="oVv-Kl-VqH" secondAttribute="trailing" constant="80" id="xgR-bV-gsR"/>
+                            <constraint firstItem="QaW-ZD-2SB" firstAttribute="leading" secondItem="DOq-Tg-HZb" secondAttribute="leading" constant="80" id="yfR-ev-Xfa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="d8z-21-XO3"/>
@@ -500,6 +534,7 @@
     <resources>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <image name="dw21batch2-mynt-01.jpg" width="1200" height="1200"/>
+        <image name="school-blackboard.jpg" width="5838" height="3763"/>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

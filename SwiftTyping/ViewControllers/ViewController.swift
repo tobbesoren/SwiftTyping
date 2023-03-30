@@ -10,6 +10,9 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var nameEdit: UITextField!
+    @IBOutlet weak var difficultyLabel: UILabel!
+    @IBOutlet weak var startLevelLabel: UILabel!
+    
     var defaults = UserDefaults.standard
     
     override func viewDidLoad() {
