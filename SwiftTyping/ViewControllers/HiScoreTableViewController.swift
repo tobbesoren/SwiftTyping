@@ -9,7 +9,6 @@ import UIKit
 
 class HiScoreTableViewController: UITableViewController {
     
-    //let defaults = UserDefaults.standard
     let defaults = DefaultsHandler()
     var hiScores = [[String?]]()
     
