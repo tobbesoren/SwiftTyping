@@ -13,31 +13,30 @@ class ViewController: UIViewController {
     @IBOutlet weak var difficultyLabel: UILabel!
     @IBOutlet weak var startLevelLabel: UILabel!
     
-    var defaults = UserDefaults.standard
+    let defaults = DefaultsHandler()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let name: String = defaults.object(forKey: "PlayerName") as? String {
-            nameEdit.text = name
-        } else {
-            defaults.set("Incognito", forKey: "PlayerName")
+        if defaults.getName() != "Incognito" {
+            nameEdit.text = defaults.getName()
         }
     }
     
     
     @IBAction func startButtonPressed(_ sender: Any) {
         
-        if nameEdit.text != "" {
-            defaults.set(nameEdit.text, forKey: "PlayerName")
+        if let name = nameEdit.text {
+            if name == "" {
+                defaults.setName(name: "Incognito")
+            } else {
+                defaults.setName(name: name)
+            }
         }
         performSegue(withIdentifier: "startGameSegue", sender: nil)
     }
-    
+        
     @IBAction func unwindToStart(segue: UIStoryboardSegue) {}
         
-    
-   
-
-}
-
+        
+    }
