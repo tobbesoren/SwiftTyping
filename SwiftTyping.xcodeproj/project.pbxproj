@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9C0820B729D5A51F0053CD12 /* UserDefaultHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0820B629D5A51F0053CD12 /* UserDefaultHandler.swift */; };
+		9C0820B929D607800053CD12 /* school-blackboard.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CDED3CF29D5810E00DDA9A7 /* school-blackboard.jpg */; };
+		9C0820BA29D6078B0053CD12 /* dw21batch2-mynt-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CDED3CE29D580D500DDA9A7 /* dw21batch2-mynt-01.jpg */; };
 		9C9F931E29C9E42A0029CA22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F931D29C9E42A0029CA22 /* AppDelegate.swift */; };
 		9C9F932029C9E42A0029CA22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F931F29C9E42A0029CA22 /* SceneDelegate.swift */; };
 		9C9F932229C9E42A0029CA22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F932129C9E42A0029CA22 /* ViewController.swift */; };
@@ -25,9 +27,7 @@
 		9C9F936429CDEEE10029CA22 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F936329CDEEE10029CA22 /* GameOverViewController.swift */; };
 		9C9F93AE29CFA5AB0029CA22 /* HiScoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F93AD29CFA5AB0029CA22 /* HiScoreTableViewController.swift */; };
 		9C9F93B229CFAA690029CA22 /* HiScoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F93B129CFAA690029CA22 /* HiScoreTableViewCell.swift */; };
-		9C9F93B629D095270029CA22 /* dw21batch2-mynt-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C9F93B529D095270029CA22 /* dw21batch2-mynt-01.jpg */; };
 		9C9F93B929D0AC010029CA22 /* MomType.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C9F93B829D0AC010029CA22 /* MomType.ttf */; };
-		9CDED3D029D5810E00DDA9A7 /* school-blackboard.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CDED3CF29D5810E00DDA9A7 /* school-blackboard.jpg */; };
 		9CDED3D229D5855000DDA9A7 /* Chalk Board.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CDED3D129D5855000DDA9A7 /* Chalk Board.ttf */; };
 		9CDED3D429D5856A00DDA9A7 /* Coffee House.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CDED3D329D5856A00DDA9A7 /* Coffee House.ttf */; };
 		9CDED3D629D5858500DDA9A7 /* ContéScriptReduced.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CDED3D529D5858500DDA9A7 /* ContéScriptReduced.ttf */; };
@@ -77,7 +77,6 @@
 		9C9F936329CDEEE10029CA22 /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 		9C9F93AD29CFA5AB0029CA22 /* HiScoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiScoreTableViewController.swift; sourceTree = "<group>"; };
 		9C9F93B129CFAA690029CA22 /* HiScoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiScoreTableViewCell.swift; sourceTree = "<group>"; };
-		9C9F93B529D095270029CA22 /* dw21batch2-mynt-01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "dw21batch2-mynt-01.jpg"; path = "../../../../../../Downloads/hand-drawn-retro-typewriter/dw21batch2-mynt-01.jpg"; sourceTree = "<group>"; };
 		9C9F93B829D0AC010029CA22 /* MomType.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = MomType.ttf; path = ../../../../../Downloads/moms_typewriter/MomType.ttf; sourceTree = "<group>"; };
 		9CDED3CE29D580D500DDA9A7 /* dw21batch2-mynt-01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "dw21batch2-mynt-01.jpg"; sourceTree = "<group>"; };
 		9CDED3CF29D5810E00DDA9A7 /* school-blackboard.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "school-blackboard.jpg"; path = "../../../../../Downloads/school-blackboard.jpg"; sourceTree = "<group>"; };
@@ -141,8 +140,8 @@
 				9C9F936129CB934A0029CA22 /* ViewControllers */,
 				9C9F931D29C9E42A0029CA22 /* AppDelegate.swift */,
 				9C9F931F29C9E42A0029CA22 /* SceneDelegate.swift */,
-				9C9F935929CA03640029CA22 /* svenska-ord.txt */,
 				9C9F932329C9E42A0029CA22 /* Main.storyboard */,
+				9C9F935929CA03640029CA22 /* svenska-ord.txt */,
 				9C9F932629C9E42B0029CA22 /* Assets.xcassets */,
 				9C9F932829C9E42B0029CA22 /* LaunchScreen.storyboard */,
 				9C9F932B29C9E42B0029CA22 /* Info.plist */,
@@ -186,7 +185,6 @@
 				9C9F935D29CA193C0029CA22 /* Clock.swift */,
 				9C9F935B29CA09690029CA22 /* GameWords.swift */,
 				9C9F935F29CA23600029CA22 /* Game.swift */,
-				9C9F93B529D095270029CA22 /* dw21batch2-mynt-01.jpg */,
 				9C9F93B129CFAA690029CA22 /* HiScoreTableViewCell.swift */,
 				9C0820B629D5A51F0053CD12 /* UserDefaultHandler.swift */,
 			);
@@ -320,15 +318,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CDED3D829D5859C00DDA9A7 /* Creta_TRIAL.ttf in Resources */,
+				9C0820B929D607800053CD12 /* school-blackboard.jpg in Resources */,
 				9CDED3DF29D5927800DDA9A7 /* blackboard_set.jpg in Resources */,
 				9C9F932A29C9E42B0029CA22 /* LaunchScreen.storyboard in Resources */,
 				9CDED3D929D58FA400DDA9A7 /* Assets.xcassets in Resources */,
-				9C9F93B629D095270029CA22 /* dw21batch2-mynt-01.jpg in Resources */,
 				9CDED3D629D5858500DDA9A7 /* ContéScriptReduced.ttf in Resources */,
+				9C0820BA29D6078B0053CD12 /* dw21batch2-mynt-01.jpg in Resources */,
 				9C9F93B929D0AC010029CA22 /* MomType.ttf in Resources */,
 				9C9F935A29CA03650029CA22 /* svenska-ord.txt in Resources */,
 				9CDED3D429D5856A00DDA9A7 /* Coffee House.ttf in Resources */,
-				9CDED3D029D5810E00DDA9A7 /* school-blackboard.jpg in Resources */,
 				9CDED3D229D5855000DDA9A7 /* Chalk Board.ttf in Resources */,
 				9C9F932529C9E42A0029CA22 /* Main.storyboard in Resources */,
 			);

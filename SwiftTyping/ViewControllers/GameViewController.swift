@@ -10,7 +10,7 @@ import UIKit
 class GameViewController: UIViewController {
     
     var game: Game?
-    //let defaults = UserDefaults.standard
+   
     let defaults = DefaultsHandler()
     
     
