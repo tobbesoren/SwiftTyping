@@ -5,6 +5,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>MomType.ttf</string>
+		<string>Chalk Board.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

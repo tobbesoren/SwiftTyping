@@ -7,6 +7,10 @@
 
 import UIKit
 
+/*
+ Not much going on here! I had such great plans...
+ Another day, perhaps.
+ */
 class HiScoreTableViewCell: UITableViewCell {
 
     @IBOutlet weak var scoreLabel: UILabel!

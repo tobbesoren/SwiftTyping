@@ -6,11 +6,20 @@
 //
 
 import UIKit
+import AVFoundation
 
+/*
+ Updates the game view and plays sounds.
+ Keeps an instance of Game-class, where the game logic hides.
+ */
 class GameViewController: UIViewController {
     
     var game: Game?
-    let defaults = UserDefaults.standard
+   
+    let defaults = DefaultsHandler()
+    
+    var player = SoundPlayer()
+    var wordCount = 0
     
     
     @IBOutlet weak var scoreLabel: UILabel!
@@ -24,21 +33,20 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let name: String = defaults.object(forKey: "PlayerName") as? String {
-            print(name)
-            nameLabel.text = name
-        }
+        game = Game(scoreFunction: updateScoreLabel,
+                    randomWordFunction: updateWordLabel,
+                    levelFunction: updateLevelLabel,
+                    clockTickFunction: updateTimerLabel,
+                    timesUpFunction: timesUp)
         
+        editTextField.spellCheckingType = .no
+        editTextField.autocorrectionType = .no
         
-        game = Game(scoreFunction: updateScoreLabel, randomWordFunction: updateWordLabel, levelFunction: updateLevelLabel, clockTickFunction: updateTimerLabel, timesUpFunction: timesUp)
-        
-        levelLabel.text = "Level: \(String(((game?.gameWords.getLevel() ?? 0) - 2) ))"
-        scoreLabel.text = String(game?.score ?? 0)
-        difficultyLabel.text = setLevelLabel()
+        resetLabels()
     }
     
-    func setLevelLabel() -> String {
-        switch game?.getDifficulty() {
+    func setDifficultyLabel() -> String {
+        switch defaults.getDifficulty() {
         case 1: return "Easy"
         case 2: return "Normal"
         case 3: return "Hard"
@@ -47,8 +55,19 @@ class GameViewController: UIViewController {
         
     }
     
+    func resetLabels() {
+        nameLabel.text = defaults.getName()
+        updateLevelLabel(level: defaults.getLevel())
+        updateScoreLabel(score: 0)
+        difficultyLabel.text = setDifficultyLabel()
+        timerLabel.text = "0"
+        randomWordLabel.text = "Ready?"
+        editTextField.text = ""
+        editTextField.placeholder = "Tap to start"
+    }
+    
     func updateScoreLabel(score: Int) {
-        scoreLabel.text = String(score)
+        scoreLabel.text = "Score: \(String(score))"
     }
     
     func updateWordLabel(word: String) {
@@ -56,7 +75,7 @@ class GameViewController: UIViewController {
     }
     
     func updateLevelLabel(level: Int) {
-        levelLabel.text = "Level: \(String(level - 2))"
+        levelLabel.text = "Level: \(String(level))"
     }
     
     func updateTimerLabel() {
@@ -67,18 +86,7 @@ class GameViewController: UIViewController {
     func timesUp() {
         performSegue(withIdentifier: "GameOverSegue", sender: nil)
         game?.resetValues()
-        randomWordLabel.text = "Ready?"
-        scoreLabel.text = "Score"
-        timerLabel.text = "0"
-        levelLabel.text = String(game?.gameWords.getLevel() ?? 0)
-        scoreLabel.text = String(game?.score ?? 0)
-        editTextField.text = ""
-        
-    }
-    
-    
-    @IBAction func randomButtonPressed(_ sender: Any) {
-        game?.newWord()
+        resetLabels()
     }
     
     @IBAction func textFieldSelected(_ sender: Any) {
@@ -93,26 +101,31 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func textEdited(_ sender: Any) {
-        
-        game?.enteredWord = editTextField.text ?? ""
-        if let game {
-            if game.checkWord() {editTextField.text = ""}
+        var path: String?
+        if editTextField.text?.count ?? 0 < wordCount {
+            path = Bundle.main.path(forResource: "mixkit-typewriter-soft-hit-1366", ofType:"wav")
+            
+        } else if editTextField.text?.count ?? 0 > wordCount {
+            path = Bundle.main.path(forResource: "mixkit-mechanical-typewriter-single-hit-1382", ofType:"wav")
         }
-    }
-    
-    @IBAction func diffDownPressed(_ sender: Any) {
-        game?.decreaseLevel()
-    }
-    
-    
-    @IBAction func diffUpPressed(_ sender: Any) {
-        game?.raiseLevel()
+        wordCount = editTextField.text?.count ?? 0
+        player.playSound(soundPath: path ?? "")
+        game?.setEnteredWord(word: editTextField.text ?? "")
+        if let game {
+            //Maybe add penalty for typing errors? But not today.
+            if game.checkWord() {
+                editTextField.text = ""
+                path = Bundle.main.path(forResource: "mixkit-typewriter-classic-return-1381", ofType:"wav")
+                player.playSound(soundPath: path ?? "")
+                wordCount = 0
+            }
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "GameOverSegue" {
             if let destinationVC = segue.destination as? GameOverViewController {
-               destinationVC.score = game?.score
+               destinationVC.score = game?.getScore()
             }
         }
     }

@@ -7,14 +7,23 @@
 
 import Foundation
 
+/*
+ This class handles word list.
+ It reads the words from a .txt-file and adds them to a dictionary, where
+ word length is used as keys. So the dictionary holds a number of arrays of strings:
+ One for three-letter words, one for four-letter words and so on.
+ It also keeps track of current wordLength, based on level, and a currentWordList
+ built from the dictionary, using wordLength to determin which arrays to use.
+ It can return a random word from currentWordList.
+ */
 class GameWords {
     
     private var wordDict: [Int: [String]] = [:]
-    private var level: Int
+    private var wordLength: Int
     private var currentWordList = [String]()
     
     init(level: Int) {
-        self.level = level
+        self.wordLength = level + 2
         let filePath = Bundle.main.path(forResource: "svenska-ord", ofType: "txt");
             let URL = NSURL.fileURL(withPath: filePath!)
 
@@ -29,7 +38,6 @@ class GameWords {
                 print(error);
             }
         setCurrentWordList()
-        //print(currentWordList)
     }
     
     private func addWordToDict(word: String) {
@@ -43,8 +51,8 @@ class GameWords {
     
     private func setCurrentWordList() {
         var wordList = [String]()
-        let maxWordLength = level + 3
-        for key in level...maxWordLength {
+        let maxWordLength = wordLength + 3
+        for key in wordLength...maxWordLength {
             if let newList = wordDict[key] {
                 wordList += newList
             }
@@ -52,13 +60,9 @@ class GameWords {
         currentWordList = wordList
     }
     
-    func setLevel(level: Int) {
-        self.level = level
+    func setWordLength(level: Int) {
+        self.wordLength = level + 2
         setCurrentWordList()
-    }
-    
-    func getLevel() -> Int {
-        return level
     }
 
     func getRandomWord() -> String {
