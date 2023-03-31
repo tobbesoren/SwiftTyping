@@ -89,11 +89,6 @@ class GameViewController: UIViewController {
         resetLabels()
     }
     
-    
-    @IBAction func randomButtonPressed(_ sender: Any) {
-        game?.newWord()
-    }
-    
     @IBAction func textFieldSelected(_ sender: Any) {
         editTextField.placeholder = ""
         
@@ -125,17 +120,6 @@ class GameViewController: UIViewController {
                 wordCount = 0
             }
         }
-    }
-    
-
-    
-    @IBAction func diffDownPressed(_ sender: Any) {
-        game?.decreaseLevel()
-    }
-    
-    
-    @IBAction func diffUpPressed(_ sender: Any) {
-        game?.raiseLevel()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

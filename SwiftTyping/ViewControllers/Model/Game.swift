@@ -105,7 +105,15 @@ class Game {
     }
     
     func checkForLevelUp() {
-        if clearedWords % 10 == 0 {
+        var levelUpDivider: Int
+        
+        switch difficulty {
+        case 1: levelUpDivider = 8
+        case 2: levelUpDivider = 6
+        case 3: levelUpDivider = 4
+        default: levelUpDivider = 8
+        }
+        if clearedWords % levelUpDivider == 0 {
             raiseLevel()
         }
     }
