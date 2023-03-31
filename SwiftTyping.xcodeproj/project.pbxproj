@@ -147,6 +147,7 @@
 		9C9F931C29C9E42A0029CA22 /* SwiftTyping */ = {
 			isa = PBXGroup;
 			children = (
+				9C9F936229CB93800029CA22 /* Model */,
 				9C4B189029D62AD50083BAD7 /* Sound */,
 				9CDED3CD29D580CA00DDA9A7 /* Images */,
 				9C9F93B729D0ABE70029CA22 /* Fonts */,
@@ -187,7 +188,6 @@
 				9C9F934D29C9FBD10029CA22 /* GameViewController.swift */,
 				9C9F93AD29CFA5AB0029CA22 /* HiScoreTableViewController.swift */,
 				9C9F936329CDEEE10029CA22 /* GameOverViewController.swift */,
-				9C9F936229CB93800029CA22 /* Model */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
