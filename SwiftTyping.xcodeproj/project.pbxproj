@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		9C0820B729D5A51F0053CD12 /* UserDefaultHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0820B629D5A51F0053CD12 /* UserDefaultHandler.swift */; };
-		9C0820B929D607800053CD12 /* school-blackboard.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CDED3CF29D5810E00DDA9A7 /* school-blackboard.jpg */; };
 		9C0820BA29D6078B0053CD12 /* dw21batch2-mynt-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CDED3CE29D580D500DDA9A7 /* dw21batch2-mynt-01.jpg */; };
-		9C4B189529D62B080083BAD7 /* mixkit-typewriter-classic-return-1381.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9C4B189129D62B080083BAD7 /* mixkit-typewriter-classic-return-1381.wav */; };
-		9C4B189829D62B080083BAD7 /* mixkit-typewriter-soft-hit-1366.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9C4B189429D62B080083BAD7 /* mixkit-typewriter-soft-hit-1366.wav */; };
 		9C4B189A29D62F610083BAD7 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4B189929D62F610083BAD7 /* SoundPlayer.swift */; };
-		9C4B189C29D6F28F0083BAD7 /* mixkit-mechanical-typewriter-single-hit-1382.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9C4B189B29D6F28F0083BAD7 /* mixkit-mechanical-typewriter-single-hit-1382.wav */; };
+		9C4B18A029D715730083BAD7 /* mixkit-typewriter-classic-return-1381.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9C4B189D29D715730083BAD7 /* mixkit-typewriter-classic-return-1381.wav */; };
+		9C4B18A129D715730083BAD7 /* mixkit-typewriter-soft-hit-1366.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9C4B189E29D715730083BAD7 /* mixkit-typewriter-soft-hit-1366.wav */; };
+		9C4B18A229D715730083BAD7 /* mixkit-mechanical-typewriter-single-hit-1382.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9C4B189F29D715730083BAD7 /* mixkit-mechanical-typewriter-single-hit-1382.wav */; };
+		9C4B18A429D716930083BAD7 /* MomType.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C4B18A329D716930083BAD7 /* MomType.ttf */; };
+		9C4B18A629D716B90083BAD7 /* Chalk Board.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C4B18A529D716B90083BAD7 /* Chalk Board.ttf */; };
+		9C4B18A929D717510083BAD7 /* school-blackboard.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C4B18A729D717510083BAD7 /* school-blackboard.jpg */; };
+		9C4B18AA29D717510083BAD7 /* blackboard_set.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C4B18A829D717510083BAD7 /* blackboard_set.jpg */; };
 		9C9F931E29C9E42A0029CA22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F931D29C9E42A0029CA22 /* AppDelegate.swift */; };
 		9C9F932029C9E42A0029CA22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F931F29C9E42A0029CA22 /* SceneDelegate.swift */; };
 		9C9F932229C9E42A0029CA22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F932129C9E42A0029CA22 /* ViewController.swift */; };
@@ -31,10 +34,7 @@
 		9C9F936429CDEEE10029CA22 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F936329CDEEE10029CA22 /* GameOverViewController.swift */; };
 		9C9F93AE29CFA5AB0029CA22 /* HiScoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F93AD29CFA5AB0029CA22 /* HiScoreTableViewController.swift */; };
 		9C9F93B229CFAA690029CA22 /* HiScoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F93B129CFAA690029CA22 /* HiScoreTableViewCell.swift */; };
-		9C9F93B929D0AC010029CA22 /* MomType.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C9F93B829D0AC010029CA22 /* MomType.ttf */; };
-		9CDED3D229D5855000DDA9A7 /* Chalk Board.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CDED3D129D5855000DDA9A7 /* Chalk Board.ttf */; };
 		9CDED3D929D58FA400DDA9A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C9F932629C9E42B0029CA22 /* Assets.xcassets */; };
-		9CDED3DF29D5927800DDA9A7 /* blackboard_set.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CDED3DE29D5927800DDA9A7 /* blackboard_set.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,10 +56,14 @@
 
 /* Begin PBXFileReference section */
 		9C0820B629D5A51F0053CD12 /* UserDefaultHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultHandler.swift; sourceTree = "<group>"; };
-		9C4B189129D62B080083BAD7 /* mixkit-typewriter-classic-return-1381.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "mixkit-typewriter-classic-return-1381.wav"; path = "../../../../../Downloads/mixkit-typewriter-classic-return-1381.wav"; sourceTree = "<group>"; };
-		9C4B189429D62B080083BAD7 /* mixkit-typewriter-soft-hit-1366.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "mixkit-typewriter-soft-hit-1366.wav"; path = "../../../../../Downloads/mixkit-typewriter-soft-hit-1366.wav"; sourceTree = "<group>"; };
 		9C4B189929D62F610083BAD7 /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
-		9C4B189B29D6F28F0083BAD7 /* mixkit-mechanical-typewriter-single-hit-1382.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "mixkit-mechanical-typewriter-single-hit-1382.wav"; path = "../../../../../Downloads/mixkit-mechanical-typewriter-single-hit-1382.wav"; sourceTree = "<group>"; };
+		9C4B189D29D715730083BAD7 /* mixkit-typewriter-classic-return-1381.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "mixkit-typewriter-classic-return-1381.wav"; sourceTree = "<group>"; };
+		9C4B189E29D715730083BAD7 /* mixkit-typewriter-soft-hit-1366.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "mixkit-typewriter-soft-hit-1366.wav"; sourceTree = "<group>"; };
+		9C4B189F29D715730083BAD7 /* mixkit-mechanical-typewriter-single-hit-1382.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "mixkit-mechanical-typewriter-single-hit-1382.wav"; sourceTree = "<group>"; };
+		9C4B18A329D716930083BAD7 /* MomType.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MomType.ttf; sourceTree = "<group>"; };
+		9C4B18A529D716B90083BAD7 /* Chalk Board.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Chalk Board.ttf"; sourceTree = "<group>"; };
+		9C4B18A729D717510083BAD7 /* school-blackboard.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "school-blackboard.jpg"; sourceTree = "<group>"; };
+		9C4B18A829D717510083BAD7 /* blackboard_set.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blackboard_set.jpg; sourceTree = "<group>"; };
 		9C9F931A29C9E42A0029CA22 /* SwiftTyping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTyping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C9F931D29C9E42A0029CA22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C9F931F29C9E42A0029CA22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,11 +86,7 @@
 		9C9F936329CDEEE10029CA22 /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 		9C9F93AD29CFA5AB0029CA22 /* HiScoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiScoreTableViewController.swift; sourceTree = "<group>"; };
 		9C9F93B129CFAA690029CA22 /* HiScoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiScoreTableViewCell.swift; sourceTree = "<group>"; };
-		9C9F93B829D0AC010029CA22 /* MomType.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = MomType.ttf; path = ../../../../../Downloads/moms_typewriter/MomType.ttf; sourceTree = "<group>"; };
 		9CDED3CE29D580D500DDA9A7 /* dw21batch2-mynt-01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "dw21batch2-mynt-01.jpg"; sourceTree = "<group>"; };
-		9CDED3CF29D5810E00DDA9A7 /* school-blackboard.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "school-blackboard.jpg"; path = "../../../../../Downloads/school-blackboard.jpg"; sourceTree = "<group>"; };
-		9CDED3D129D5855000DDA9A7 /* Chalk Board.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Chalk Board.ttf"; path = "../../../../../Downloads/Chalk Board Demo/Chalk Board.ttf"; sourceTree = "<group>"; };
-		9CDED3DE29D5927800DDA9A7 /* blackboard_set.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = blackboard_set.jpg; path = "../../../../../Downloads/black-green-school-chalkboards-with-chalk-pieces-two-class-blackboards-isolated-grey-background/blackboard_set.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,9 +117,9 @@
 		9C4B189029D62AD50083BAD7 /* Sound */ = {
 			isa = PBXGroup;
 			children = (
-				9C4B189B29D6F28F0083BAD7 /* mixkit-mechanical-typewriter-single-hit-1382.wav */,
-				9C4B189129D62B080083BAD7 /* mixkit-typewriter-classic-return-1381.wav */,
-				9C4B189429D62B080083BAD7 /* mixkit-typewriter-soft-hit-1366.wav */,
+				9C4B189F29D715730083BAD7 /* mixkit-mechanical-typewriter-single-hit-1382.wav */,
+				9C4B189D29D715730083BAD7 /* mixkit-typewriter-classic-return-1381.wav */,
+				9C4B189E29D715730083BAD7 /* mixkit-typewriter-soft-hit-1366.wav */,
 			);
 			path = Sound;
 			sourceTree = "<group>";
@@ -208,8 +208,8 @@
 		9C9F93B729D0ABE70029CA22 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				9CDED3D129D5855000DDA9A7 /* Chalk Board.ttf */,
-				9C9F93B829D0AC010029CA22 /* MomType.ttf */,
+				9C4B18A529D716B90083BAD7 /* Chalk Board.ttf */,
+				9C4B18A329D716930083BAD7 /* MomType.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -217,8 +217,8 @@
 		9CDED3CD29D580CA00DDA9A7 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				9CDED3DE29D5927800DDA9A7 /* blackboard_set.jpg */,
-				9CDED3CF29D5810E00DDA9A7 /* school-blackboard.jpg */,
+				9C4B18A829D717510083BAD7 /* blackboard_set.jpg */,
+				9C4B18A729D717510083BAD7 /* school-blackboard.jpg */,
 				9CDED3CE29D580D500DDA9A7 /* dw21batch2-mynt-01.jpg */,
 			);
 			path = Images;
@@ -328,18 +328,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C0820B929D607800053CD12 /* school-blackboard.jpg in Resources */,
-				9C4B189C29D6F28F0083BAD7 /* mixkit-mechanical-typewriter-single-hit-1382.wav in Resources */,
-				9CDED3DF29D5927800DDA9A7 /* blackboard_set.jpg in Resources */,
 				9C9F932A29C9E42B0029CA22 /* LaunchScreen.storyboard in Resources */,
+				9C4B18AA29D717510083BAD7 /* blackboard_set.jpg in Resources */,
+				9C4B18A929D717510083BAD7 /* school-blackboard.jpg in Resources */,
 				9CDED3D929D58FA400DDA9A7 /* Assets.xcassets in Resources */,
+				9C4B18A429D716930083BAD7 /* MomType.ttf in Resources */,
+				9C4B18A229D715730083BAD7 /* mixkit-mechanical-typewriter-single-hit-1382.wav in Resources */,
+				9C4B18A629D716B90083BAD7 /* Chalk Board.ttf in Resources */,
 				9C0820BA29D6078B0053CD12 /* dw21batch2-mynt-01.jpg in Resources */,
-				9C9F93B929D0AC010029CA22 /* MomType.ttf in Resources */,
+				9C4B18A129D715730083BAD7 /* mixkit-typewriter-soft-hit-1366.wav in Resources */,
 				9C9F935A29CA03650029CA22 /* svenska-ord.txt in Resources */,
-				9C4B189529D62B080083BAD7 /* mixkit-typewriter-classic-return-1381.wav in Resources */,
-				9CDED3D229D5855000DDA9A7 /* Chalk Board.ttf in Resources */,
+				9C4B18A029D715730083BAD7 /* mixkit-typewriter-classic-return-1381.wav in Resources */,
 				9C9F932529C9E42A0029CA22 /* Main.storyboard in Resources */,
-				9C4B189829D62B080083BAD7 /* mixkit-typewriter-soft-hit-1366.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
