@@ -7,6 +7,10 @@
 
 import UIKit
 
+/*
+ Game Over screen. Shows the player´s name and score, and lets them
+ save the score to userDefaults.
+ */
 class GameOverViewController: UIViewController {
     
     var score: Int?

@@ -7,6 +7,15 @@
 
 import Foundation
 
+/*
+ This class handles word list.
+ It reads the words from a .txt-file and adds them to a dictionary, where
+ word length is used as keys. So the dictionary holds a number of arrays of strings:
+ One for three-letter words, one for four-letter words and so on.
+ It also keeps track of current wordLength, based on level, and a currentWordList
+ built from the dictionary, using wordLength to determin which arrays to use.
+ It can return a random word from currentWordList.
+ */
 class GameWords {
     
     private var wordDict: [Int: [String]] = [:]
@@ -54,10 +63,6 @@ class GameWords {
     func setWordLength(level: Int) {
         self.wordLength = level + 2
         setCurrentWordList()
-    }
-    
-    func getWordLength() -> Int {
-        return wordLength
     }
 
     func getRandomWord() -> String {

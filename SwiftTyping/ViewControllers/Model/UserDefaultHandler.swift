@@ -7,7 +7,9 @@
 
 import Foundation
 
-
+/*
+ This class handles read and write from/to userDefaults.
+ */
 class DefaultsHandler {
     private let defaults = UserDefaults.standard
     private var name: String

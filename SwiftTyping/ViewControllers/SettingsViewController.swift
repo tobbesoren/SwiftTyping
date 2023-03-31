@@ -7,6 +7,10 @@
 
 import UIKit
 
+/*
+ Settings. Uses two picker views to set difficulty and startLevel.
+ Saves to userDefaults.
+ */
 class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     var picker1Options: [String] = []

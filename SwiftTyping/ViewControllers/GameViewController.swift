@@ -8,6 +8,10 @@
 import UIKit
 import AVFoundation
 
+/*
+ Updates the game view and plays sounds.
+ Keeps an instance of Game-class, where the game logic hides.
+ */
 class GameViewController: UIViewController {
     
     var game: Game?
@@ -104,18 +108,16 @@ class GameViewController: UIViewController {
     @IBAction func textEdited(_ sender: Any) {
         var path: String?
         if editTextField.text?.count ?? 0 < wordCount {
-            print("Soft")
             path = Bundle.main.path(forResource: "mixkit-typewriter-soft-hit-1366", ofType:"wav")
             
         } else if editTextField.text?.count ?? 0 > wordCount {
-            print("Hard")
             path = Bundle.main.path(forResource: "mixkit-mechanical-typewriter-single-hit-1382", ofType:"wav")
         }
         wordCount = editTextField.text?.count ?? 0
         player.playSound(soundPath: path ?? "")
         game?.setEnteredWord(word: editTextField.text ?? "")
         if let game {
-            //Maybe add penalty for typing errors
+            //Maybe add penalty for typing errors? But not today.
             if game.checkWord() {
                 editTextField.text = ""
                 path = Bundle.main.path(forResource: "mixkit-typewriter-classic-return-1381", ofType:"wav")

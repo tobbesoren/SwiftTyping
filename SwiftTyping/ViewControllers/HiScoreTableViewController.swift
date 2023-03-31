@@ -7,6 +7,9 @@
 
 import UIKit
 
+/*
+ A bare bones table view, showing hi-scores.
+ */
 class HiScoreTableViewController: UITableViewController {
     
     let defaults = DefaultsHandler()

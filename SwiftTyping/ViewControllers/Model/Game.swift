@@ -7,7 +7,11 @@
 
 import Foundation
 
-
+/*
+ The Game model. Handles the games logic. Takes a number of functions
+ from the controller as arguments. This way, we can alter the controller and view
+ and only have to send new functions to the model.
+ */
 class Game {
     private let defaults = DefaultsHandler()
     private let gameWords: GameWords
@@ -73,6 +77,7 @@ class Game {
         }
     }
     
+    //This is used during development. Might find a use for it later, so it stays.
     func decreaseLevel() {
         if level > 1 {
             level -= 1

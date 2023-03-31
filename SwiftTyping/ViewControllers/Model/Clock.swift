@@ -7,6 +7,12 @@
 
 import Foundation
 
+/*
+ This class is used by Game to add a timer. Takes two functions as arguments.
+ The first determines what happens at every clocktick (Eg. update timer view)
+ The second determines what happens once tmie is up.
+ */
+
 class Clock {
     var timeLeft : Double = 0.0
     var startTime : Date?
