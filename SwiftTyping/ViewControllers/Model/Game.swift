@@ -128,7 +128,7 @@ class Game {
     
     func calculateTime() -> Double {
         let secondsPerLetter = (1.0 - (Double(level) / 100))  * (0.7 - Double(difficulty) / 8)
-        let timeLeft = (Double(currentWord.count) * secondsPerLetter) + (4 - Double(difficulty))
+        let timeLeft = (Double(currentWord.count) * secondsPerLetter) + (5 - Double(difficulty))
         return timeLeft
     }
 }

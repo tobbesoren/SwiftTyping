@@ -147,23 +147,23 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="218" verticalHuggingPriority="209" text="Score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDp-TP-hPQ">
-                                            <rect key="frame" x="149.66666666666666" y="11.666666666666666" width="54" height="20.333333333333336"/>
+                                            <rect key="frame" x="79" y="11.666666666666666" width="54" height="20.333333333333336"/>
                                             <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="184" verticalHuggingPriority="201" text="Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jID-24-Rqj">
-                                            <rect key="frame" x="267" y="11.666666666666666" width="46" height="20.333333333333336"/>
+                                            <rect key="frame" x="213" y="11.666666666666666" width="46" height="20.333333333333336"/>
                                             <fontDescription key="fontDescription" name="MomsTypewriter" family="Mom´sTypewriter" pointSize="17"/>
                                             <color key="textColor" red="0.63726091380000005" green="0.40094196799999998" blue="0.25445276500000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailingMargin" secondItem="jID-24-Rqj" secondAttribute="trailing" constant="20" id="6Fk-QD-6zb"/>
+                                        <constraint firstAttribute="trailing" secondItem="rDp-TP-hPQ" secondAttribute="trailing" constant="220" id="5Hz-U0-gOo"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="jID-24-Rqj" secondAttribute="leading" constant="120" id="6Fk-QD-6zb"/>
                                         <constraint firstItem="AcT-WX-Lv9" firstAttribute="leading" secondItem="4OM-Do-5vo" secondAttribute="leading" constant="20" id="7cK-Rs-bme"/>
                                         <constraint firstItem="AcT-WX-Lv9" firstAttribute="centerY" secondItem="4OM-Do-5vo" secondAttribute="centerY" id="KjB-Le-icd"/>
-                                        <constraint firstItem="rDp-TP-hPQ" firstAttribute="centerX" secondItem="4OM-Do-5vo" secondAttribute="centerX" id="XLV-Uu-vFh"/>
                                         <constraint firstItem="rDp-TP-hPQ" firstAttribute="centerY" secondItem="4OM-Do-5vo" secondAttribute="centerY" id="huT-iO-chP"/>
                                         <constraint firstItem="jID-24-Rqj" firstAttribute="centerY" secondItem="4OM-Do-5vo" secondAttribute="centerY" id="wUF-Ha-DyP"/>
                                     </constraints>
