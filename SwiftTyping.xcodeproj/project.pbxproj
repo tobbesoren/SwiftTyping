@@ -17,6 +17,7 @@
 		9C4B18A629D716B90083BAD7 /* Chalk Board.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C4B18A529D716B90083BAD7 /* Chalk Board.ttf */; };
 		9C4B18A929D717510083BAD7 /* school-blackboard.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C4B18A729D717510083BAD7 /* school-blackboard.jpg */; };
 		9C4B18AA29D717510083BAD7 /* blackboard_set.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C4B18A829D717510083BAD7 /* blackboard_set.jpg */; };
+		9C4B18AC29D718D40083BAD7 /* svenska-ord.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9C4B18AB29D718D40083BAD7 /* svenska-ord.txt */; };
 		9C9F931E29C9E42A0029CA22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F931D29C9E42A0029CA22 /* AppDelegate.swift */; };
 		9C9F932029C9E42A0029CA22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F931F29C9E42A0029CA22 /* SceneDelegate.swift */; };
 		9C9F932229C9E42A0029CA22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F932129C9E42A0029CA22 /* ViewController.swift */; };
@@ -27,7 +28,6 @@
 		9C9F934129C9E42B0029CA22 /* SwiftTypingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F934029C9E42B0029CA22 /* SwiftTypingUITestsLaunchTests.swift */; };
 		9C9F934E29C9FBD10029CA22 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F934D29C9FBD10029CA22 /* GameViewController.swift */; };
 		9C9F935029C9FBE60029CA22 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F934F29C9FBE60029CA22 /* SettingsViewController.swift */; };
-		9C9F935A29CA03650029CA22 /* svenska-ord.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9C9F935929CA03640029CA22 /* svenska-ord.txt */; };
 		9C9F935C29CA09690029CA22 /* GameWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F935B29CA09690029CA22 /* GameWords.swift */; };
 		9C9F935E29CA193C0029CA22 /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F935D29CA193C0029CA22 /* Clock.swift */; };
 		9C9F936029CA23600029CA22 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F935F29CA23600029CA22 /* Game.swift */; };
@@ -64,6 +64,7 @@
 		9C4B18A529D716B90083BAD7 /* Chalk Board.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Chalk Board.ttf"; sourceTree = "<group>"; };
 		9C4B18A729D717510083BAD7 /* school-blackboard.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "school-blackboard.jpg"; sourceTree = "<group>"; };
 		9C4B18A829D717510083BAD7 /* blackboard_set.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blackboard_set.jpg; sourceTree = "<group>"; };
+		9C4B18AB29D718D40083BAD7 /* svenska-ord.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "svenska-ord.txt"; sourceTree = "<group>"; };
 		9C9F931A29C9E42A0029CA22 /* SwiftTyping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTyping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C9F931D29C9E42A0029CA22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C9F931F29C9E42A0029CA22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,7 +80,6 @@
 		9C9F934029C9E42B0029CA22 /* SwiftTypingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTypingUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9C9F934D29C9FBD10029CA22 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		9C9F934F29C9FBE60029CA22 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		9C9F935929CA03640029CA22 /* svenska-ord.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "svenska-ord.txt"; path = "../../../../Downloads/svenska-ord.txt"; sourceTree = "<group>"; };
 		9C9F935B29CA09690029CA22 /* GameWords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameWords.swift; sourceTree = "<group>"; };
 		9C9F935D29CA193C0029CA22 /* Clock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
 		9C9F935F29CA23600029CA22 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
@@ -124,6 +124,14 @@
 			path = Sound;
 			sourceTree = "<group>";
 		};
+		9C4B18AF29D718F50083BAD7 /* WordList */ = {
+			isa = PBXGroup;
+			children = (
+				9C4B18AB29D718D40083BAD7 /* svenska-ord.txt */,
+			);
+			path = WordList;
+			sourceTree = "<group>";
+		};
 		9C9F931129C9E42A0029CA22 = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +155,7 @@
 		9C9F931C29C9E42A0029CA22 /* SwiftTyping */ = {
 			isa = PBXGroup;
 			children = (
+				9C4B18AF29D718F50083BAD7 /* WordList */,
 				9C9F936229CB93800029CA22 /* Model */,
 				9C4B189029D62AD50083BAD7 /* Sound */,
 				9CDED3CD29D580CA00DDA9A7 /* Images */,
@@ -155,7 +164,6 @@
 				9C9F931D29C9E42A0029CA22 /* AppDelegate.swift */,
 				9C9F931F29C9E42A0029CA22 /* SceneDelegate.swift */,
 				9C9F932329C9E42A0029CA22 /* Main.storyboard */,
-				9C9F935929CA03640029CA22 /* svenska-ord.txt */,
 				9C9F932629C9E42B0029CA22 /* Assets.xcassets */,
 				9C9F932829C9E42B0029CA22 /* LaunchScreen.storyboard */,
 				9C9F932B29C9E42B0029CA22 /* Info.plist */,
@@ -334,10 +342,10 @@
 				9CDED3D929D58FA400DDA9A7 /* Assets.xcassets in Resources */,
 				9C4B18A429D716930083BAD7 /* MomType.ttf in Resources */,
 				9C4B18A229D715730083BAD7 /* mixkit-mechanical-typewriter-single-hit-1382.wav in Resources */,
+				9C4B18AC29D718D40083BAD7 /* svenska-ord.txt in Resources */,
 				9C4B18A629D716B90083BAD7 /* Chalk Board.ttf in Resources */,
 				9C0820BA29D6078B0053CD12 /* dw21batch2-mynt-01.jpg in Resources */,
 				9C4B18A129D715730083BAD7 /* mixkit-typewriter-soft-hit-1366.wav in Resources */,
-				9C9F935A29CA03650029CA22 /* svenska-ord.txt in Resources */,
 				9C4B18A029D715730083BAD7 /* mixkit-typewriter-classic-return-1381.wav in Resources */,
 				9C9F932529C9E42A0029CA22 /* Main.storyboard in Resources */,
 			);
